@@ -826,7 +826,31 @@
         .modal-btn:hover {
             transform: translateY(-2px);
         }
-    </style>
+        /* ΚΟΥΜΠΙ ΑΠΟΘΗΚΕΥΜΕΝΩΝ - ΠΡΟΣΘΗΚΗ ΕΔΩ */
+        .saved-btn {
+            background: linear-gradient(135deg, #ffd700, #ffb347);
+            color: #333;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(255, 179, 71, 0.3);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .saved-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 179, 71, 0.4);
+        }
+
+        .saved-btn:active {
+            transform: translateY(0);
+        }
+        </style>
 </head>
 <body>
     <div class="container">
@@ -899,6 +923,9 @@
                 <button class="search-btn" id="searchBtn" onclick="searchTrips()">
                     🔍 Βρες Εκδρομές
                 </button>
+<button class="saved-btn" onclick="showSavedTrips()">
+    ⭐ Αποθηκευμένα
+</button>
             </div>
            
             <div class="filters">
@@ -2447,7 +2474,7 @@
                             coords: '57.3244,-4.4419'
                         }
                     ],
-                    icon: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+                    icon: '🏴󠁧󠁢󠁳󠁣󠁴U+E007F',
                     difficulty: 'Μέτρια',
                     bestFor: ['Φύση', 'Μύθοι', 'Φωτογραφία'],
                     season: 'Μάιος-Σεπτέμβριος',
@@ -5104,6 +5131,72 @@
         }
 
         // ====================
+        // ΠΡΟΒΟΛΗ ΑΠΟΘΗΚΕΥΜΕΝΩΝ
+        // ====================
+        function showSavedTrips() {
+            // Κρύψε τα κανονικά αποτελέσματα
+            const resultsContainer = document.getElementById('tripResults');
+            const errorState = document.getElementById('errorState');
+            const mainContent = document.querySelector('.main-content') || document.body;
+           
+            if (resultsContainer) resultsContainer.classList.add('hidden');
+            if (errorState) errorState.classList.add('hidden');
+           
+            // Δημιούργησε container για αποθηκευμένα
+            let savedContainer = document.getElementById('savedTripsContainer');
+            if (!savedContainer) {
+                savedContainer = document.createElement('div');
+                savedContainer.id = 'savedTripsContainer';
+                savedContainer.className = 'trips-container';
+                mainContent.appendChild(savedContainer);
+            }
+           
+            // Καθάρισε το container
+            savedContainer.innerHTML = '';
+           
+            if (savedTrips.length === 0) {
+                savedContainer.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">⭐</div>
+                        <h3>Δεν έχετε αποθηκεύσει ακόμα εκδρομές</h3>
+                        <p>Πατήστε το κουμπί "⭐ Αποθήκευση" σε οποιαδήποτε εκδρομή σας αρέσει!</p>
+                        <button class="primary-btn" onclick="goBackToSearch()">🔍 Πίσω στην Αναζήτηση</button>
+                    </div>
+                `;
+                savedContainer.classList.remove('hidden');
+                return;
+            }
+           
+            // Εμφάνισε τα αποθηκευμένα ταξίδια
+            const title = document.createElement('h2');
+            title.className = 'section-title';
+            title.innerHTML = `⭐ Αποθηκευμένα Ταξίδια Μου (${savedTrips.length})`;
+            savedContainer.appendChild(title);
+           
+            savedTrips.forEach(trip => {
+                const tripCard = createTripCard(trip);
+                savedContainer.appendChild(tripCard);
+            });
+           
+            // Κουμπί επιστροφής
+            const backBtn = document.createElement('button');
+            backBtn.className = 'back-btn';
+            backBtn.innerHTML = '← Πίσω στην Αναζήτηση';
+            backBtn.onclick = goBackToSearch;
+            savedContainer.appendChild(backBtn);
+           
+            savedContainer.classList.remove('hidden');
+        }
+       
+        function goBackToSearch() {
+            const savedContainer = document.getElementById('savedTripsContainer');
+            const resultsContainer = document.getElementById('tripResults');
+           
+            if (savedContainer) savedContainer.classList.add('hidden');
+            if (resultsContainer) resultsContainer.classList.remove('hidden');
+        }
+
+        // ====================
         // ΣΤΑΤΙΣΤΙΚΑ
         // ====================
         function updateStats() {
@@ -5194,4 +5287,3 @@
     </script>
 </body>
 </html>
-
