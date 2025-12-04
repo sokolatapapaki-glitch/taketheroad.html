@@ -17,13 +17,13 @@
             --gray: #64748b;
             --card-bg: rgba(255, 255, 255, 0.98);
         }
-        
+       
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+       
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #f0f9ff, #fdf2f8, #f0fdf4);
@@ -32,7 +32,7 @@
             line-height: 1.6;
             padding: 20px;
         }
-        
+       
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -43,7 +43,7 @@
             box-shadow: 0 25px 100px rgba(15, 23, 42, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
-        
+       
         /* HEADER */
         .header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -53,7 +53,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+       
         .header::before {
             content: '🚗 🌄 🏰 🌊 🏞️';
             position: absolute;
@@ -64,7 +64,7 @@
             right: 0;
             animation: float 25s infinite linear;
         }
-        
+       
         h1 {
             font-size: 52px;
             font-weight: 900;
@@ -72,7 +72,7 @@
             position: relative;
             letter-spacing: -1px;
         }
-        
+       
         .subtitle {
             font-size: 22px;
             opacity: 0.95;
@@ -80,7 +80,7 @@
             margin: 0 auto 40px;
             line-height: 1.5;
         }
-        
+       
         /* TABS */
         .tabs {
             display: flex;
@@ -89,7 +89,7 @@
             margin-bottom: 40px;
             flex-wrap: wrap;
         }
-        
+       
         .tab-btn {
             padding: 16px 32px;
             background: rgba(255, 255, 255, 0.2);
@@ -102,25 +102,25 @@
             font-size: 16px;
             backdrop-filter: blur(10px);
         }
-        
+       
         .tab-btn:hover {
             background: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
         }
-        
+       
         .tab-btn.active {
             background: white;
             color: var(--primary);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
-        
+       
         /* SEARCH SECTION */
         .search-section {
             padding: 40px;
             text-align: center;
             background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
         }
-        
+       
         .search-box {
             display: flex;
             gap: 20px;
@@ -129,13 +129,13 @@
             flex-wrap: wrap;
             align-items: center;
         }
-        
+       
         .city-selector {
             flex: 1;
             min-width: 300px;
             position: relative;
         }
-        
+       
         #citySelect {
             width: 100%;
             padding: 22px 30px;
@@ -148,13 +148,13 @@
             transition: all 0.3s;
             font-weight: 600;
         }
-        
+       
         #citySelect:focus {
             outline: none;
             border-color: var(--primary);
             box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
         }
-        
+       
         .search-btn {
             padding: 22px 60px;
             background: linear-gradient(135deg, var(--accent), var(--primary));
@@ -167,17 +167,17 @@
             transition: all 0.3s;
             white-space: nowrap;
         }
-        
+       
         .search-btn:hover:not(:disabled) {
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(16, 185, 129, 0.3);
         }
-        
+       
         .search-btn:disabled {
             opacity: 0.6;
             cursor: not-allowed;
         }
-        
+       
         /* FILTERS */
         .filters {
             display: flex;
@@ -186,7 +186,7 @@
             margin-top: 30px;
             flex-wrap: wrap;
         }
-        
+       
         .filter-btn {
             padding: 14px 28px;
             background: #f1f5f9;
@@ -200,21 +200,21 @@
             align-items: center;
             gap: 8px;
         }
-        
+       
         .filter-btn:hover {
             background: #e2e8f0;
         }
-        
+       
         .filter-btn.active {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
         }
-        
+       
         /* RESULTS */
         .results-section {
             padding: 40px;
         }
-        
+       
         .results-header {
             display: flex;
             justify-content: space-between;
@@ -225,13 +225,13 @@
             flex-wrap: wrap;
             gap: 20px;
         }
-        
+       
         .results-title {
             font-size: 32px;
             font-weight: 800;
             color: var(--dark);
         }
-        
+       
         .results-count {
             font-size: 18px;
             color: var(--gray);
@@ -239,13 +239,13 @@
             padding: 8px 20px;
             border-radius: 20px;
         }
-        
+       
         .weekend-trips-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
             gap: 35px;
         }
-        
+       
         /* TRIP CARD - WEEKEND VERSION */
         .weekend-trip-card {
             background: var(--card-bg);
@@ -258,12 +258,12 @@
             opacity: 0;
             position: relative;
         }
-        
+       
         .weekend-trip-card:hover {
             transform: translateY(-12px) scale(1.02);
             box-shadow: 0 30px 70px rgba(0, 0, 0, 0.18);
         }
-        
+       
         .trip-badge {
             position: absolute;
             top: 20px;
@@ -277,7 +277,7 @@
             box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
             z-index: 2;
         }
-        
+       
         .card-image {
             height: 220px;
             position: relative;
@@ -287,7 +287,7 @@
             align-items: center;
             justify-content: center;
         }
-        
+       
         .card-image::after {
             content: '';
             position: absolute;
@@ -297,15 +297,15 @@
             height: 60px;
             background: linear-gradient(transparent, var(--card-bg));
         }
-        
+       
         .card-image-content {
             font-size: 100px;
         }
-        
+       
         .card-content {
             padding: 35px;
         }
-        
+       
         .trip-route {
             display: flex;
             align-items: center;
@@ -315,12 +315,12 @@
             font-size: 18px;
             color: var(--primary);
         }
-        
+       
         .route-arrow {
             color: var(--gray);
             font-size: 24px;
         }
-        
+       
         .trip-name {
             font-size: 26px;
             font-weight: 800;
@@ -328,14 +328,14 @@
             color: var(--dark);
             line-height: 1.3;
         }
-        
+       
         .trip-meta {
             display: flex;
             gap: 25px;
             margin-bottom: 25px;
             flex-wrap: wrap;
         }
-        
+       
         .meta-item {
             display: flex;
             align-items: center;
@@ -344,22 +344,22 @@
             font-size: 15px;
             font-weight: 600;
         }
-        
+       
         .meta-icon {
             font-size: 20px;
         }
-        
+       
         .trip-description {
             color: #475569;
             line-height: 1.7;
             margin-bottom: 30px;
             font-size: 16px;
         }
-        
+       
         .attractions-list {
             margin-bottom: 25px;
         }
-        
+       
         .attractions-list h4 {
             margin-bottom: 12px;
             color: var(--dark);
@@ -368,13 +368,13 @@
             align-items: center;
             gap: 10px;
         }
-        
+       
         .attractions-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 12px;
         }
-        
+       
         .attraction-item {
             background: #f8fafc;
             padding: 12px 16px;
@@ -383,19 +383,19 @@
             transition: all 0.3s;
             cursor: pointer;
         }
-        
+       
         .attraction-item:hover {
             background: #e2e8f0;
             transform: translateX(5px);
         }
-        
+       
         .attraction-name {
             font-weight: 600;
             color: var(--dark);
             margin-bottom: 4px;
             display: block;
         }
-        
+       
         .attraction-link {
             color: var(--primary);
             text-decoration: none;
@@ -404,18 +404,18 @@
             align-items: center;
             gap: 5px;
         }
-        
+       
         .attraction-link:hover {
             text-decoration: underline;
         }
-        
+       
         .highlights {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 30px;
         }
-        
+       
         .highlight {
             background: #f1f5f9;
             padding: 8px 16px;
@@ -424,12 +424,12 @@
             font-weight: 600;
             color: var(--dark);
         }
-        
+       
         .card-actions {
             display: flex;
             gap: 15px;
         }
-        
+       
         .btn {
             flex: 1;
             padding: 18px;
@@ -442,38 +442,38 @@
             cursor: pointer;
             font-size: 16px;
         }
-        
+       
         .btn-plan {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
         }
-        
+       
         .btn-plan:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
         }
-        
+       
         .btn-save {
             background: #f1f5f9;
             color: var(--dark);
         }
-        
+       
         .btn-save:hover {
             background: #e2e8f0;
         }
-        
+       
         .btn-save.saved {
             background: linear-gradient(135deg, var(--accent), #34d399);
             color: white;
         }
-        
+       
         /* LOADING & STATES */
         .loading {
             text-align: center;
             padding: 80px 20px;
             display: none;
         }
-        
+       
         .spinner {
             width: 70px;
             height: 70px;
@@ -483,7 +483,7 @@
             margin: 0 auto 40px;
             animation: spin 1s linear infinite;
         }
-        
+       
         .empty-state {
             text-align: center;
             padding: 100px 20px;
@@ -491,13 +491,13 @@
             border-radius: 24px;
             margin: 40px 0;
         }
-        
+       
         .empty-state h3 {
             font-size: 32px;
             margin-bottom: 20px;
             color: var(--dark);
         }
-        
+       
         .error-state {
             background: #fef2f2;
             border-radius: 24px;
@@ -506,7 +506,7 @@
             padding: 60px 40px;
             margin: 40px 0;
         }
-        
+       
         /* FOOTER */
         .footer {
             text-align: center;
@@ -515,7 +515,7 @@
             border-top: 1px solid #e2e8f0;
             background: #f8fafc;
         }
-        
+       
         .stats {
             display: flex;
             justify-content: center;
@@ -523,11 +523,11 @@
             margin: 30px 0 40px;
             flex-wrap: wrap;
         }
-        
+       
         .stat {
             text-align: center;
         }
-        
+       
         .stat-number {
             font-size: 42px;
             font-weight: 900;
@@ -537,23 +537,23 @@
             color: transparent;
             line-height: 1;
         }
-        
+       
         .stat-label {
             font-size: 16px;
             color: var(--gray);
             margin-top: 10px;
         }
-        
+       
         /* ANIMATIONS */
         @keyframes float {
             0% { transform: translateX(-150px) rotate(0deg); }
             100% { transform: translateX(150px) rotate(360deg); }
         }
-        
+       
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
-        
+       
         @keyframes cardAppear {
             from {
                 opacity: 0;
@@ -564,71 +564,71 @@
                 transform: translateY(0);
             }
         }
-        
+       
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        
+       
         /* RESPONSIVE */
         @media (max-width: 1024px) {
             .weekend-trips-grid {
                 grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
             }
         }
-        
+       
         @media (max-width: 768px) {
             .container {
                 border-radius: 24px;
             }
-            
+           
             h1 {
                 font-size: 40px;
             }
-            
+           
             .header, .search-section, .results-section {
                 padding: 30px 20px;
             }
-            
+           
             .search-box {
                 flex-direction: column;
             }
-            
+           
             .city-selector, .search-btn {
                 width: 100%;
             }
-            
+           
             .weekend-trips-grid {
                 grid-template-columns: 1fr;
             }
-            
+           
             .results-header {
                 flex-direction: column;
                 align-items: flex-start;
             }
-            
+           
             .trip-meta {
                 gap: 15px;
             }
-            
+           
             .stats {
                 gap: 30px;
             }
-            
+           
             .attractions-grid {
                 grid-template-columns: 1fr;
             }
         }
-        
+       
         /* UTILITY CLASSES */
         .hidden {
             display: none !important;
         }
-        
+       
         .fade-in {
             animation: fadeIn 0.5s ease forwards;
         }
-        
+       
         /* NOTIFICATION */
         .notification {
             position: fixed;
@@ -646,7 +646,7 @@
             max-width: 450px;
             border-left: 6px solid var(--accent);
         }
-        
+       
         @keyframes slideIn {
             from {
                 transform: translateX(100%);
@@ -657,19 +657,19 @@
                 opacity: 1;
             }
         }
-        
+       
         .notification.success {
             border-left-color: var(--accent);
         }
-        
+       
         .notification.warning {
             border-left-color: var(--warning);
         }
-        
+       
         .notification.error {
             border-left-color: #ef4444;
         }
-        
+       
         /* TAGS */
         .tag {
             display: inline-flex;
@@ -682,13 +682,13 @@
             margin-right: 8px;
             margin-bottom: 8px;
         }
-        
+       
         .tag-nature { background: #d1fae5; color: #065f46; }
         .tag-culture { background: #e0e7ff; color: #3730a3; }
         .tag-coastal { background: #dbeafe; color: #1e40af; }
         .tag-adventure { background: #fef3c7; color: #92400e; }
         .tag-history { background: #fce7f3; color: #9d174d; }
-        
+       
         /* ATTRACTION MODAL */
         .attraction-modal-overlay {
             position: fixed;
@@ -705,12 +705,12 @@
             visibility: hidden;
             transition: all 0.3s;
         }
-        
+       
         .attraction-modal-overlay.active {
             opacity: 1;
             visibility: visible;
         }
-        
+       
         .attraction-modal {
             background: white;
             border-radius: 24px;
@@ -722,11 +722,11 @@
             transition: transform 0.3s;
             box-shadow: 0 30px 100px rgba(0, 0, 0, 0.4);
         }
-        
+       
         .attraction-modal-overlay.active .attraction-modal {
             transform: translateY(0);
         }
-        
+       
         .modal-header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
@@ -734,12 +734,12 @@
             border-radius: 24px 24px 0 0;
             position: relative;
         }
-        
+       
         .modal-header h3 {
             font-size: 28px;
             margin-bottom: 10px;
         }
-        
+       
         .modal-close {
             position: absolute;
             top: 25px;
@@ -756,50 +756,50 @@
             font-size: 20px;
             transition: all 0.3s;
         }
-        
+       
         .modal-close:hover {
             transform: rotate(90deg);
         }
-        
+       
         .modal-content {
             padding: 30px;
         }
-        
+       
         .modal-info {
             margin-bottom: 25px;
         }
-        
+       
         .info-item {
             display: flex;
             gap: 15px;
             margin-bottom: 15px;
             align-items: flex-start;
         }
-        
+       
         .info-icon {
             color: var(--primary);
             font-size: 20px;
             min-width: 24px;
         }
-        
+       
         .info-text {
             color: var(--dark);
             line-height: 1.6;
         }
-        
+       
         .modal-description {
             color: #475569;
             line-height: 1.7;
             margin-bottom: 30px;
             font-size: 16px;
         }
-        
+       
         .modal-actions {
             display: flex;
             gap: 15px;
             margin-top: 30px;
         }
-        
+       
         .modal-btn {
             flex: 1;
             padding: 16px;
@@ -812,17 +812,17 @@
             cursor: pointer;
             font-size: 15px;
         }
-        
+       
         .modal-btn.primary {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
         }
-        
+       
         .modal-btn.secondary {
             background: #f1f5f9;
             color: var(--dark);
         }
-        
+       
         .modal-btn:hover {
             transform: translateY(-2px);
         }
@@ -834,7 +834,7 @@
         <header class="header">
             <h1>Weekend Escape</h1>
             <p class="subtitle">Ημερήσιες εκδρομές & σαββατοκύριακα μακριά από την πόλη. Βρες τα καλύτερα road trips για φύση, πολιτισμό και περιπέτεια!</p>
-            
+           
             <div class="tabs">
                 <button class="tab-btn active" onclick="switchTab('weekend')">🚗 Σαββατοκύριακα</button>
                 <button class="tab-btn" onclick="switchTab('nature')">🏞️ Φύση</button>
@@ -843,44 +843,63 @@
                 <button class="tab-btn" onclick="switchTab('adventure')">🧗 Περιπέτεια</button>
             </div>
         </header>
-        
+       
         <!-- SEARCH SECTION -->
         <section class="search-section">
             <h2 style="font-size: 36px; margin-bottom: 20px; color: var(--dark);">
                 🗺️ Από πού θέλεις να ξεκινήσεις;
             </h2>
-            
+           
             <div class="search-box">
                 <div class="city-selector">
                     <select id="citySelect">
-                        <option value="">👈 Επέλεξε πόλη εκκίνησης</option>
-                        <option value="rome" selected>🇮🇹 Ρώμη, Ιταλία</option>
-                        <option value="athens">🇬🇷 Αθήνα, Ελλάδα</option>
-                        <option value="paris">🇫🇷 Παρίσι, Γαλλία</option>
-                        <option value="barcelona">🇪🇸 Βαρκελώνη, Ισπανία</option>
-                        <option value="berlin">🇩🇪 Βερολίνο, Γερμανία</option>
-                        <option value="london">🇬🇧 Λονδίνο, ΗΒ</option>
-                        <option value="vienna">🇦🇹 Βιέννη, Αυστρία</option>
-                        <option value="prague">🇨🇿 Πράγα, Τσεχία</option>
-                        <option value="budapest">🇭🇺 Βουδαπέστη, Ουγγαρία</option>
-                        <option value="amsterdam">🇳🇱 Άμστερνταμ, Ολλανδία</option>
-                        <option value="madrid">🇪🇸 Μαδρίτη, Ισπανία</option>
-                        <option value="lisbon">🇵🇹 Λισαβόνα, Πορτογαλία</option>
-                        <option value="dublin">🇮🇪 Δουβλίνο, Ιρλανδία</option>
-                        <option value="edinburgh">🏴 Εδιμβούργο, Σκωτία</option>
-                        <option value="zagreb">🇭🇷 Ζάγκρεμπ, Κροατία</option>
-                        <option value="belgrade">🇷🇸 Βελιγράδι, Σερβία</option>
-                        <option value="sofia">🇧🇬 Σόφια, Βουλγαρία</option>
-                        <option value="bucharest">🇷🇴 Βουκουρέστι, Ρουμανία</option>
-                        <option value="warsaw">🇵🇱 Βαρσοβία, Πολωνία</option>
-                        <option value="brussels">🇧🇪 Βρυξέλλες, Βέλγιο</option>
-                    </select>
+    <option value="">👈 Επέλεξε πόλη εκκίνησης</option>
+    <option value="amsterdam">🇳🇱 Άμστερνταμ, Ολλανδία</option>
+    <option value="athens" selected>🇬🇷 Αθήνα, Ελλάδα</option>
+    <option value="vienna">🇦🇹 Βιέννη, Αυστρία</option>
+    <option value="barcelona">🇪🇸 Βαρκελώνη, Ισπανία</option>
+    <option value="venice">🇮🇹 Βενετία, Ιταλία</option>
+    <option value="belgrade">🇷🇸 Βελιγράδι, Σερβία</option>
+    <option value="berlin">🇩🇪 Βερολίνο, Γερμανία</option>
+    <option value="brussels">🇧🇪 Βρυξέλλες, Βέλγιο</option>
+    <option value="bucharest">🇷🇴 Βουκουρέστι, Ρουμανία</option>
+    <option value="budapest">🇭🇺 Βουδαπέστη, Ουγγαρία</option>
+    <option value="warsaw">🇵🇱 Βαρσοβία, Πολωνία</option>
+    <option value="hamburg">🇩🇪 Αμβούργο, Γερμανία</option>
+    <option value="bilbao">🇪🇸 Μπιλμπάο, Ισπανία</option>
+    <option value="valencia">🇪🇸 Βαλένθια, Ισπανία</option>
+    <option value="dublin">🇮🇪 Δουβλίνο, Ιρλανδία</option>
+    <option value="edinburgh">🏴 Εδιμβούργο, Σκωτία</option>
+    <option value="thessaloniki">🇬🇷 Θεσσαλονίκη, Ελλάδα</option>
+    <option value="zagreb">🇭🇷 Ζάγκρεμπ, Κροατία</option>
+    <option value="london">🇬🇧 Λονδίνο, ΗΒ</option>
+    <option value="lisbon">🇵🇹 Λισαβόνα, Πορτογαλία</option>
+    <option value="lucerne">🇨🇭 Λουκέρνη, Ελβετία</option>
+    <option value="lyon">🇫🇷 Λυών, Γαλλία</option>
+    <option value="nicosia">🇨🇾 Λευκωσία, Κύπρος</option>
+    <option value="madrid">🇪🇸 Μαδρίτη, Ισπανία</option>
+    <option value="malaga">🇪🇸 Μάλαγα, Ισπανία</option>
+    <option value="marseille">🇫🇷 Μασσαλία, Γαλλία</option>
+    <option value="milan">🇮🇹 Μιλάνο, Ιταλία</option>
+    <option value="dubrovnik">🇭🇷 Ντουμπρόβνικ, Κροατία</option>
+    <option value="nice">🇫🇷 Νίκαια, Γαλλία</option>
+    <option value="paris">🇫🇷 Παρίσι, Γαλλία</option>
+    <option value="prague">🇨🇿 Πράγα, Τσεχία</option>
+    <option value="rhodes">🇬🇷 Ρόδος, Ελλάδα</option>
+    <option value="rome">🇮🇹 Ρώμη, Ιταλία</option>
+    <option value="salzburg">🇦🇹 Σάλτσμπουργκ, Αυστρία</option>
+    <option value="seville">🇪🇸 Σεβίλλη, Ισπανία</option>
+    <option value="sofia">🇧🇬 Σόφια, Βουλγαρία</option>
+    <option value="split">🇭🇷 Σπλιτ, Κροατία</option>
+    <option value="florence">🇮🇹 Φλωρεντία, Ιταλία</option>
+    <option value="cologne">🇩🇪 Κολωνία, Γερμανία</option>
+</select>
                 </div>
                 <button class="search-btn" id="searchBtn" onclick="searchTrips()">
                     🔍 Βρες Εκδρομές
                 </button>
             </div>
-            
+           
             <div class="filters">
                 <button class="filter-btn active" onclick="setDistanceFilter('all')">
                     📍 Όλες Αποστάσεις
@@ -896,14 +915,14 @@
                 </button>
             </div>
         </section>
-        
+       
         <!-- LOADING -->
         <div class="loading" id="loading">
             <div class="spinner"></div>
             <h3 style="margin-bottom: 15px; color: var(--dark);">Προετοιμάζω τα καλύτερα road trips...</h3>
             <p style="color: var(--gray);">Ψάχνω εκδρομές, δρομολόγια και hidden gems</p>
         </div>
-        
+       
         <!-- ERROR -->
         <div class="error-state hidden" id="errorState">
             <h3>😔 Κάτι πήγε στραβά</h3>
@@ -912,18 +931,18 @@
                 🔄 Δοκίμασε Ξανά
             </button>
         </div>
-        
+       
         <!-- RESULTS -->
         <section class="results-section" id="resultsSection">
             <div class="results-header hidden" id="resultsHeader">
                 <h2 class="results-title" id="resultsTitle">Ημερήσιες Εκδρομές</h2>
                 <div class="results-count" id="resultsCount">0 εκδρομές</div>
             </div>
-            
+           
             <div class="weekend-trips-grid" id="resultsGrid">
                 <!-- Τα trips θα εμφανιστούν εδώ -->
             </div>
-            
+           
             <div class="empty-state" id="emptyState">
                 <h3>🚀 Έτοιμος για road trip;</h3>
                 <p style="font-size: 18px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
@@ -948,7 +967,7 @@
                 </div>
             </div>
         </section>
-        
+       
         <!-- FOOTER -->
         <footer class="footer">
             <p style="font-size: 18px; margin-bottom: 10px;">Weekend Escape - Η εφαρμογή για όσους λατρεύουν τα road trips</p>
@@ -1024,8 +1043,8 @@
                     description: 'Περάστε ένα μαγικό σαββατοκύριακο στη λεγόμενη "Αθήνα της Ιταλίας". Επισκεφθείτε την Galleria degli Uffizi, τον Καθεδρικό ναό και γευθείτε το αυθεντικό bistecca alla fiorentina.',
                     highlights: ['Uffizi Gallery', 'Duomo di Firenze', 'Ponte Vecchio', 'Tuscan Wine'],
                     attractions: [
-                        { 
-                            name: 'Galleria degli Uffizi', 
+                        {
+                            name: 'Galleria degli Uffizi',
                             description: 'Το σημαντικότερο μουσείο τέχνης στην Ιταλία, με έργα του Botticelli, Leonardo da Vinci, Michelangelo και άλλων.',
                             location: 'Florence, Italy',
                             type: 'Μουσείο',
@@ -1033,8 +1052,8 @@
                             price: '€20-25',
                             coords: '43.7685,11.2559'
                         },
-                        { 
-                            name: 'Cattedrale di Santa Maria del Fiore', 
+                        {
+                            name: 'Cattedrale di Santa Maria del Fiore',
                             description: 'Ο διάσημος καθεδρικός ναός της Φλωρεντίας με την τεράστια τρούλο του Brunelleschi.',
                             location: 'Piazza del Duomo, Florence',
                             type: 'Θρησκευτικό Μνημείο',
@@ -1061,8 +1080,8 @@
                     description: 'Επισκεφθείτε την αρχαία Πομπηία και αναρριχηθείτε στον ηφαίστειο Βεζούβιο. Στη Νάπολη, δοκιμάστε την αυθεντική πίτσα και εξερευνήστε τα υπονόματα της πόλης.',
                     highlights: ['Πομπηία', 'Βεζούβιος', 'Νάπολη', 'Πίτσα'],
                     attractions: [
-                        { 
-                            name: 'Archaeological Park of Pompeii', 
+                        {
+                            name: 'Archaeological Park of Pompeii',
                             description: 'Η αρχαία ρωμαϊκή πόλη που διατηρήθηκε από την έκρηξη του Βεζούβιου το 79 μ.Χ.',
                             location: 'Pompeii, Italy',
                             type: 'Αρχαιολογικός Χώρος',
@@ -1070,8 +1089,8 @@
                             price: '€16',
                             coords: '40.7495,14.5004'
                         },
-                        { 
-                            name: 'Mount Vesuvius National Park', 
+                        {
+                            name: 'Mount Vesuvius National Park',
                             description: 'Ο ενεργός ηφαίστειος που κατέστρεψε την Πομπηία. Πανοραμική θέα στη Νάπολη.',
                             location: 'Vesuvius, Italy',
                             type: 'Εθνικό Πάρκο',
@@ -1098,8 +1117,8 @@
                     description: 'Χάστε τον εαυτό σας στα λοφώδη τοπία της Τοσκάνης. Επισκεφθείτε τα βιντόγια, γευθείτε τοπικά κρασιά και εξερευνήστε μεσαιωνικά χωριά όπως η Σιένα και η Σαν Τζιμινιάνο.',
                     highlights: ['Βιντόγια', 'Σιένα', 'San Gimignano', 'Οίνος Chianti'],
                     attractions: [
-                        { 
-                            name: 'Historic Centre of Siena', 
+                        {
+                            name: 'Historic Centre of Siena',
                             description: 'Μεσαιωνική πόλη με γοτθική αρχιτεκτονική και την περίφημη πλατεία Piazza del Campo.',
                             location: 'Siena, Italy',
                             type: 'Ιστορικό Κέντρο',
@@ -1107,8 +1126,8 @@
                             price: 'Ελεύθερη',
                             coords: '43.3186,11.3308'
                         },
-                        { 
-                            name: 'San Gimignano Historic Centre', 
+                        {
+                            name: 'San Gimignano Historic Centre',
                             description: 'Το "Μανχάταν του Μεσαίωνα" με τους διάσημους πύργους του.',
                             location: 'San Gimignano, Italy',
                             type: 'Ιστορικό Χωριό',
@@ -1135,8 +1154,8 @@
                     description: 'Μια από τις πιο γραφικές ακτές στον κόσμο. Οδηγήστε κατά μήκος της Amalfi Drive, επισκεφθείτε τα Positano, Amalfi και Ravello, και κολυμπήστε σε κρυφές παραλίες.',
                     highlights: ['Positano', 'Amalfi', 'Ravello', 'Path of the Gods'],
                     attractions: [
-                        { 
-                            name: 'Positano', 
+                        {
+                            name: 'Positano',
                             description: 'Το πιο φωτογενές χωριό της Ακτής Amalfi με πολύχρωμα σπίτια που κρέμονται από τους βράχους.',
                             location: 'Positano, Italy',
                             type: 'Παραθαλάσσιο Χωριό',
@@ -1144,8 +1163,8 @@
                             price: 'Ελεύθερη',
                             coords: '40.6281,14.4850'
                         },
-                        { 
-                            name: 'Amalfi Cathedral', 
+                        {
+                            name: 'Amalfi Cathedral',
                             description: 'Υπέροχος καθεδρικός ναός με μικσάραβικη αρχιτεκτονική στην καρδιά του Amalfi.',
                             location: 'Amalfi, Italy',
                             type: 'Θρησκευτικό Μνημείο',
@@ -1172,8 +1191,8 @@
                     description: 'Το μεγαλύτερο προστατευόμενο πάρκο στην Ιταλία. Πεζοπορία, αναρρίχηση και παρατήρηση άγριων ζώων όπως αρκούδες και λύκοι στα Απέννινα όρη.',
                     highlights: ['Πεζοπορία', 'Άγρια ζώα', 'Λίμνες', 'Βουνά'],
                     attractions: [
-                        { 
-                            name: 'Parco Nazionale d\'Abruzzo', 
+                        {
+                            name: 'Parco Nazionale d\'Abruzzo',
                             description: 'Προστατευόμενη περιοχή με αρκούδες, λύκους και ελάφια. Ιδανική για πεζοπορία και φωτογραφία άγριας ζωής.',
                             location: 'Abruzzo, Italy',
                             type: 'Εθνικό Πάρκο',
@@ -1181,8 +1200,8 @@
                             price: 'Ελεύθερη',
                             coords: '41.8000,13.7667'
                         },
-                        { 
-                            name: 'Lake Barrea', 
+                        {
+                            name: 'Lake Barrea',
                             description: 'Πανέμορφη τεχνητή λίμνη στους πρόποδες των Απεννίνων. Ιδανική για πεζοπορία και καγιάκ.',
                             location: 'Barrea, Italy',
                             type: 'Φυσικό Αξιοθέατο',
@@ -1198,7 +1217,7 @@
                     coords: '41.8000,13.7667'
                 }
             ],
-            
+           
             // ΑΘΗΝΑ, ΕΛΛΑΔΑ
             'athens': [
                 {
@@ -1213,8 +1232,8 @@
                     description: 'Επισκεφθείτε τα διάσημα μοναστήρια που ισορροπούν πάνω σε βραχώδεις κολώνες. Αναρριχηθείτε, εξερευνήστε τις σπηλιές και θαυμάστε το μοναδικό τοπίο.',
                     highlights: ['Μοναστήρια', 'Αναρρίχηση', 'Σπηλιές', 'Πανοραμική θέα'],
                     attractions: [
-                        { 
-                            name: 'Great Meteoron Monastery', 
+                        {
+                            name: 'Great Meteoron Monastery',
                             description: 'Το μεγαλύτερο και παλαιότερο μοναστήρι των Μετεώρων, ιδρύθηκε τον 14ο αιώνα.',
                             location: 'Kalambaka, Greece',
                             type: 'Θρησκευτικό Μνημείο',
@@ -1222,8 +1241,8 @@
                             price: '€3',
                             coords: '39.7241,21.6266'
                         },
-                        { 
-                            name: 'Varlaam Monastery', 
+                        {
+                            name: 'Varlaam Monastery',
                             description: 'Το δεύτερο μεγαλύτερο μοναστήρι των Μετεώρων με πλούσια συλλογή κειμηλίων.',
                             location: 'Kalambaka, Greece',
                             type: 'Θρησκευτικό Μνημείο',
@@ -1250,8 +1269,8 @@
                     description: 'Ρομαντική βόλτα στο Ναύπλιο, την πρώτη πρωτεύουσα της Ελλάδας. Επισκεφθείτε το Πάλαμηδο, τις παραλίες και τις κοντινές Μυκήνες.',
                     highlights: ['Πάλαμηδο', 'Παραλίες', 'Μυκήνες', 'Παλιά Πόλη'],
                     attractions: [
-                        { 
-                            name: 'Palamidi Fortress', 
+                        {
+                            name: 'Palamidi Fortress',
                             description: 'Ενετικό φρούριο με 999 σκαλοπάτια και πανοραμική θέα στο Αργολικό κόλπο.',
                             location: 'Nafplio, Greece',
                             type: 'Ιστορικό Φρούριο',
@@ -1259,8 +1278,8 @@
                             price: '€8',
                             coords: '37.5611,22.7958'
                         },
-                        { 
-                            name: 'Archaeological Site of Mycenae', 
+                        {
+                            name: 'Archaeological Site of Mycenae',
                             description: 'Αρχαιολογικός χώρος των Μυκηνών με τους Λιοντάρεις και τον Θησαυρό του Ατρέα.',
                             location: 'Mycenae, Greece',
                             type: 'Αρχαιολογικός Χώρος',
@@ -1287,8 +1306,8 @@
                     description: 'Επισκεφθείτε το αρχαίο μαντείο των Δελφών και την "ομφαλό της γης". Συνδυάστε με σκι ή πεζοπορία στην Αράχωβα.',
                     highlights: ['Αρχαίο Μαντείο', 'Μουσείο', 'Αράχωβα', 'Παρνασσός'],
                     attractions: [
-                        { 
-                            name: 'Archaeological Site of Delphi', 
+                        {
+                            name: 'Archaeological Site of Delphi',
                             description: 'Το σημαντικότερο αρχαίο μαντείο της Αρχαίας Ελλάδας. Ναός του Απόλλωνα, θέατρο και στάδιο.',
                             location: 'Delphi, Greece',
                             type: 'Αρχαιολογικός Χώρος',
@@ -1296,8 +1315,8 @@
                             price: '€12',
                             coords: '38.4824,22.5009'
                         },
-                        { 
-                            name: 'Delphi Archaeological Museum', 
+                        {
+                            name: 'Delphi Archaeological Museum',
                             description: 'Πλούσιο αρχαιολογικό μουσείο με εκθέματα από τον αρχαιολογικό χώρο.',
                             location: 'Delphi, Greece',
                             type: 'Μουσείο',
@@ -1324,8 +1343,8 @@
                     description: 'Το Πήλιο προσφέρει μοναδικό συνδυασμό βουνού και θάλασσας. Παραδοσιακά χωριά, δασικές διαδρομές και παραλίες με κρυστάλλινα νερά.',
                     highlights: ['Παραδοσιακά χωριά', 'Διαδρομές', 'Παραλίες', 'Τραμουντάνα'],
                     attractions: [
-                        { 
-                            name: 'Makrinitsa Village', 
+                        {
+                            name: 'Makrinitsa Village',
                             description: 'Το "Βαλκωνιά του Πηλίου" με παραδοσιακά αρχοντικά και θέα στον Παγασητικό.',
                             location: 'Pelion, Greece',
                             type: 'Παραδοσιακό Χωριό',
@@ -1333,8 +1352,8 @@
                             price: 'Ελεύθερη',
                             coords: '39.4042,22.9856'
                         },
-                        { 
-                            name: 'Mylopotamos Beach', 
+                        {
+                            name: 'Mylopotamos Beach',
                             description: 'Μία από τις πιο όμορφες παραλίες του Πηλίου με κρυστάλλινα νερά και πέτρες.',
                             location: 'Pelion, Greece',
                             type: 'Παραλία',
@@ -1361,8 +1380,8 @@
                     description: 'Μεσαιωνική πόλη-φρούριο σε βραχώδη νησίδα. Εξερευνήστε τα σοκάκια, δείτε την παλιά πόλη και κολυμπήστε στις γύρω παραλίες.',
                     highlights: ['Μεσαιωνική πόλη', 'Παλιό φρούριο', 'Παραλίες', 'Τοπικά εδέσματα'],
                     attractions: [
-                        { 
-                            name: 'Monemvasia Fortress', 
+                        {
+                            name: 'Monemvasia Fortress',
                             description: 'Μεσαιωνικό φρούριο που καταλαμβάνει ολόκληρη τη βραχώδη νησίδα. Μαγευτική ατμόσφαιρα.',
                             location: 'Monemvasia, Greece',
                             type: 'Ιστορικό Φρούριο',
@@ -1370,8 +1389,8 @@
                             price: 'Ελεύθερη',
                             coords: '36.6881,23.0531'
                         },
-                        { 
-                            name: 'Church of Agia Sofia', 
+                        {
+                            name: 'Church of Agia Sofia',
                             description: 'Βυζαντινός ναός του 12ου αιώνα με θέα στην θάλασσα.',
                             location: 'Monemvasia, Greece',
                             type: 'Θρησκευτικό Μνημείο',
@@ -1387,7 +1406,7 @@
                     coords: '36.6881,23.0531'
                 }
             ],
-            
+           
             // ΠΑΡΙΣΙ, ΓΑΛΛΙΑ
             'paris': [
                 {
@@ -1402,8 +1421,8 @@
                     description: 'Το θαύμα της Δύσης. Μοναστήρι που ανεγέρθηκε πάνω σε βράχο και γίνεται νησί με την παλίρροια. Μαγευτική θέα και ιστορία.',
                     highlights: ['Μοναστήρι', 'Παλίρροια', 'Μεσαιωνική πόλη', 'Νυχτερινή φωταγώγηση'],
                     attractions: [
-                        { 
-                            name: 'Abbaye du Mont-Saint-Michel', 
+                        {
+                            name: 'Abbaye du Mont-Saint-Michel',
                             description: 'Μοντελοποιημένη μονή του 8ου αιώνα που αποτελεί ένα από τα πιο διάσημα αξιοθέατα της Γαλλίας.',
                             location: 'Mont Saint-Michel, Normandy',
                             type: 'Θρησκευτικό Μνημείο',
@@ -1411,8 +1430,8 @@
                             price: '€11',
                             coords: '48.6361,-1.5115'
                         },
-                        { 
-                            name: 'La Mère Poulard Restaurant', 
+                        {
+                            name: 'La Mère Poulard Restaurant',
                             description: 'Το διάσημο εστιατόριο που σερβίρει την αυθεντική ομελέτα του Mont Saint-Michel από το 1888.',
                             location: 'Mont Saint-Michel, France',
                             type: 'Εστιατόριο',
@@ -1439,8 +1458,8 @@
                     description: 'Τα πιο όμορφα κάστρα της Γαλλίας. Επισκεφθείτε τα Chambord, Chenonceau και Cheverny. Οι κήποι και τα κρασιά είναι εξαιρετικά.',
                     highlights: ['Κάστρο Chambord', 'Chenonceau', 'Κρασιά', 'Κήποι'],
                     attractions: [
-                        { 
-                            name: 'Château de Chambord', 
+                        {
+                            name: 'Château de Chambord',
                             description: 'Το μεγαλύτερο και πιο διάσημο κάστρο της Κοιλάδας του Λίγηρα, με 440 δωμάτια.',
                             location: 'Chambord, France',
                             type: 'Κάστρο',
@@ -1448,8 +1467,8 @@
                             price: '€14.50',
                             coords: '47.6164,1.5173'
                         },
-                        { 
-                            name: 'Château de Chenonceau', 
+                        {
+                            name: 'Château de Chenonceau',
                             description: 'Το "Κάστρο των Κυριών" που εκτείνεται πάνω από τον ποταμό Cher.',
                             location: 'Chenonceaux, France',
                             type: 'Κάστρο',
@@ -1476,8 +1495,8 @@
                     description: 'Ιστορική περιοχή του Β΄ Παγκοσμίου Πολέμου. Επισκεφθείτε τις παραλίες της απόβασης, τα μουσεία και το Αμερικανικό Νεκροταφείο.',
                     highlights: ['Omaha Beach', 'Αμερικανικό Νεκροταφείο', 'Μουσείο', 'Ποτάμια'],
                     attractions: [
-                        { 
-                            name: 'Normandy American Cemetery', 
+                        {
+                            name: 'Normandy American Cemetery',
                             description: 'Συγκλονιστικό νεκροταφείο με 9.387 τάφους Αμερικανών στρατιωτών.',
                             location: 'Colleville-sur-Mer, France',
                             type: 'Ιστορικός Χώρος',
@@ -1485,8 +1504,8 @@
                             price: 'Ελεύθερη',
                             coords: '49.3601,-0.8504'
                         },
-                        { 
-                            name: 'Pointe du Hoc', 
+                        {
+                            name: 'Pointe du Hoc',
                             description: 'Ιστορικό σημείο όπου οι Αμερικανοί Ρέηντζερς ανέβηκαν τους βράχους την Ημέρα D.',
                             location: 'Cricqueville-en-Bessin, France',
                             type: 'Ιστορικός Χώρος',
@@ -1513,8 +1532,8 @@
                     description: 'Επισκεφθείτε το σπίτι και τους διάσημους κήπους του Claude Monet. Η πηγή έμπνευσης για τους πίνακές του, ιδιαίτερα τα νούφαρα.',
                     highlights: ['Κήποι Μονέ', 'Σπίτι του καλλιτέχνη', 'Νούφαρα', 'Ιαπωνική γέφυρα'],
                     attractions: [
-                        { 
-                            name: 'Claude Monet\'s House and Gardens', 
+                        {
+                            name: 'Claude Monet\'s House and Gardens',
                             description: 'Το σπίτι και οι κήποι που ενέπνευσαν τους πίνακες νούφαρων του Μονέ.',
                             location: 'Giverny, France',
                             type: 'Μουσείο & Κήποι',
@@ -1522,8 +1541,8 @@
                             price: '€11',
                             coords: '49.0748,1.5320'
                         },
-                        { 
-                            name: 'Japanese Bridge', 
+                        {
+                            name: 'Japanese Bridge',
                             description: 'Η διάσημη ιαπωνική γέφυρα που εμφανίζεται σε πολλούς πίνακες του Μονέ.',
                             location: 'Giverny, France',
                             type: 'Αξιοθέατο',
@@ -1539,7 +1558,7 @@
                     coords: '49.0748,1.5320'
                 }
             ],
-            
+           
             // ΒΑΡΚΕΛΩΝΗ, ΙΣΠΑΝΙΑ
             'barcelona': [
                 {
@@ -1554,8 +1573,8 @@
                     description: 'Από τις πιο όμορφες ακτές της Ισπανίας. Κρυμμένες κόλποι, μεσαιωνικά χωριά και καταγάλανα νερά. Ιδανική για κολύμπι και snorkeling.',
                     highlights: ['Cadaqués', 'Tossa de Mar', 'Coves', 'Παραλίες'],
                     attractions: [
-                        { 
-                            name: 'Cadaqués', 
+                        {
+                            name: 'Cadaqués',
                             description: 'Γραφικό ψαροχώρι που ήταν η κατοικία του Salvador Dalí. Λαβυρινθώδη δρομάκια και παραδοσιακά σπίτια.',
                             location: 'Costa Brava, Spain',
                             type: 'Χωριό',
@@ -1563,8 +1582,8 @@
                             price: 'Ελεύθερη',
                             coords: '42.2885,3.2764'
                         },
-                        { 
-                            name: 'Tossa de Mar Castle', 
+                        {
+                            name: 'Tossa de Mar Castle',
                             description: 'Μεσαιωνικό φρούριο με θέα στη θάλασσα και την παραλία.',
                             location: 'Tossa de Mar, Spain',
                             type: 'Ιστορικό Φρούριο',
@@ -1591,8 +1610,8 @@
                     description: 'Βραχώδες βουνό με μοναδικά βράχια και μοναστήρι. Πεζοπορία, τελεφερίκ και θέα σε όλη την Καταλονία.',
                     highlights: ['Μοναστήρι', 'Πεζοπορία', 'Τελεφερίκ', 'Χορωδία'],
                     attractions: [
-                        { 
-                            name: 'Santa Maria de Montserrat Abbey', 
+                        {
+                            name: 'Santa Maria de Montserrat Abbey',
                             description: 'Βενεδικτίνικο μοναστήρι του 11ου αιώνα. Σπίτι της Παναγίας της Μονσεράτ.',
                             location: 'Montserrat, Spain',
                             type: 'Θρησκευτικό Μνημείο',
@@ -1600,8 +1619,8 @@
                             price: 'Ελεύθερη',
                             coords: '41.5934,1.8383'
                         },
-                        { 
-                            name: 'Sant Joan Funicular', 
+                        {
+                            name: 'Sant Joan Funicular',
                             description: 'Τελεφερίκ που ανεβάζει τους επισκέπτες 250 μέτρα ψηλότερα για εκπληκτική θέα.',
                             location: 'Montserrat, Spain',
                             type: 'Τελεφερίκ',
@@ -1628,8 +1647,8 @@
                     description: 'Τα καλύτερα διατηρημένα ρωμαϊκά μνημεία στην Ισπανία. Αμφιθέατρο, ακρόπολη και εντυπωσιακό αρχαιολογικό μουσείο.',
                     highlights: ['Ρωμαϊκό αμφιθέατρο', 'Πάλιο φρούριο', 'Παραλία', 'Μουσείο'],
                     attractions: [
-                        { 
-                            name: 'Tarragona Amphitheatre', 
+                        {
+                            name: 'Tarragona Amphitheatre',
                             description: 'Ρωμαϊκό αμφιθέατρο του 2ου αιώνα μ.Χ. με θέα στη Μεσόγειο.',
                             location: 'Tarragona, Spain',
                             type: 'Αρχαιολογικός Χώρος',
@@ -1637,8 +1656,8 @@
                             price: '€5',
                             coords: '41.1144,1.2583'
                         },
-                        { 
-                            name: 'Tarragona Cathedral', 
+                        {
+                            name: 'Tarragona Cathedral',
                             description: 'Γοτθικός καθεδρικός ναός του 12ου-14ου αιώνα στην ψηλότερη θέση της πόλης.',
                             location: 'Tarragona, Spain',
                             type: 'Θρησκευτικό Μνημείο',
@@ -1654,7 +1673,7 @@
                     coords: '41.1189,1.2445'
                 }
             ],
-            
+           
             // ΒΕΡΟΛΙΝΟ, ΓΕΡΜΑΝΙΑ
             'berlin': [
                 {
@@ -1669,8 +1688,8 @@
                     description: 'Το Βερσαλλίες της Γερμανίας. Περίτεχνα παλάτια, υπέροχους κήπους και ιστορική σημασία ως τόπος της Διάσκεψης του Πότσδαμ.',
                     highlights: ['Ανάκτορο Sanssouci', 'Κήποι', 'Ιστορική πόλη', 'Γέφυρες'],
                     attractions: [
-                        { 
-                            name: 'Sanssouci Palace', 
+                        {
+                            name: 'Sanssouci Palace',
                             description: 'Το καλοκαιρινό ανάκτορο του Φρειδερίκου του Μεγάλου. Ροκοκό αρχιτεκτονική και υπέροχοι κήποι.',
                             location: 'Potsdam, Germany',
                             type: 'Ανάκτορο',
@@ -1678,8 +1697,8 @@
                             price: '€14',
                             coords: '52.4042,13.0382'
                         },
-                        { 
-                            name: 'New Palace (Neues Palais)', 
+                        {
+                            name: 'New Palace (Neues Palais)',
                             description: 'Το τελευταίο ανάκτορο που χτίστηκε από τον Φρειδερίκο τον Μέγα, με πάνω από 200 δωμάτια.',
                             location: 'Potsdam, Germany',
                             type: 'Ανάκτορο',
@@ -1706,8 +1725,8 @@
                     description: 'Εθνικό πάρκο με εντυπωσιακούς βραχώδεις σχηματισμούς, γέφυρες και πεζοπορικές διαδρομές. Ιδανικό για αναρρίχηση και φωτογραφία.',
                     highlights: ['Βραχώδεις σχηματισμοί', 'Πεζοπορία', 'Αναρρίχηση', 'Γέφυρα Bastei'],
                     attractions: [
-                        { 
-                            name: 'Bastei Bridge', 
+                        {
+                            name: 'Bastei Bridge',
                             description: 'Πέτρινη γέφυρα του 19ου αιώνα με εκπληκτική θέα στον ποταμό Έλβα και τα βράχια.',
                             location: 'Saxon Switzerland, Germany',
                             type: 'Φυσικό Αξιοθέατο',
@@ -1715,8 +1734,8 @@
                             price: 'Ελεύθερη',
                             coords: '50.9622,14.0711'
                         },
-                        { 
-                            name: 'Königstein Fortress', 
+                        {
+                            name: 'Königstein Fortress',
                             description: 'Μία από τις μεγαλύτερες οχυρωμένες ακροπόλεις στην Ευρώπη, με 750ετή ιστορία.',
                             location: 'Königstein, Germany',
                             type: 'Ιστορικό Φρούριο',
@@ -1732,7 +1751,7 @@
                     coords: '50.9222,14.2744'
                 }
             ],
-            
+           
             // ΛΟΝΔΙΝΟ, ΗΒ
             'london': [
                 {
@@ -1747,8 +1766,8 @@
                     description: 'Περιηγηθείτε στα πανεπιστημιακά κολέγια της Oxford και εξερευνήστε τα παραδοσιακά χωριά των Cotswolds με πέτρινα σπίτια.',
                     highlights: ['Πανεπιστήμιο Oxford', 'Cotswolds χωριά', 'Βιβλιοθήκη Bodleian', 'Πανεπιστημιακά κολέγια'],
                     attractions: [
-                        { 
-                            name: 'University of Oxford Colleges', 
+                        {
+                            name: 'University of Oxford Colleges',
                             description: 'Ιστορικά κολέγια του πανεπιστημίου της Oxford, ιδρύθηκε τον 12ο αιώνα.',
                             location: 'Oxford, UK',
                             type: 'Πανεπιστήμιο',
@@ -1756,8 +1775,8 @@
                             price: '€5-15 ανά κολέγιο',
                             coords: '51.7548,-1.2544'
                         },
-                        { 
-                            name: 'Blenheim Palace', 
+                        {
+                            name: 'Blenheim Palace',
                             description: 'Μεγαλειώδες αγγλικό εξοχικό μέγαρο, γενέτειρα του Ουίνστων Τσώρτσιλ.',
                             location: 'Woodstock, UK',
                             type: 'Ανάκτορο',
@@ -1784,8 +1803,8 @@
                     description: 'Η πιο διάσημη παραθαλάσσια πόλη της Βρετανίας. Επισκεφθείτε το Royal Pavilion, την Brighton Pier και τα γραφικά ασπροκόκκινα κρεμνάκια των Seven Sisters.',
                     highlights: ['Brighton Pier', 'Royal Pavilion', 'Seven Sisters', 'Lanes'],
                     attractions: [
-                        { 
-                            name: 'Brighton Palace Pier', 
+                        {
+                            name: 'Brighton Palace Pier',
                             description: 'Ιστορική προβλήτα του 1899 με πάρκο ψυχαγωγίας, εστιατόρια και παιχνίδια.',
                             location: 'Brighton, UK',
                             type: 'Προβλήτα',
@@ -1793,8 +1812,8 @@
                             price: 'Ελεύθερη είσοδος',
                             coords: '50.8170,-0.1369'
                         },
-                        { 
-                            name: 'Seven Sisters Country Park', 
+                        {
+                            name: 'Seven Sisters Country Park',
                             description: 'Εκπληκτικά ασπρα κόκκινα κρεμνάκια κατά μήκος της ακτής του Κανάλιου.',
                             location: 'Seaford, UK',
                             type: 'Φυσικό Πάρκο',
@@ -1810,7 +1829,7 @@
                     coords: '50.8225,-0.1372'
                 }
             ],
-            
+           
             // ΒΙΕΝΝΗ, ΑΥΣΤΡΙΑ
             'vienna': [
                 {
@@ -1825,8 +1844,8 @@
                     description: 'Γενέτειρα του Μότσαρτ και των "Ηχών της Μουσικής". Επισκεφθείτε το σπίτι του Μότσαρτ, το φρούριο Hohensalzburg και τα γραφικά σοκάκια.',
                     highlights: ['Σπίτι Μότσαρτ', 'Φρούριο Hohensalzburg', 'Ηχές της Μουσικής', 'Παλιά Πόλη'],
                     attractions: [
-                        { 
-                            name: 'Hohensalzburg Fortress', 
+                        {
+                            name: 'Hohensalzburg Fortress',
                             description: 'Μεσαιωνικό φρούριο που δεσπόζει πάνω από τη πόλη. Πανοραμική θέα στα Άλπεια.',
                             location: 'Salzburg, Austria',
                             type: 'Ιστορικό Φρούριο',
@@ -1834,8 +1853,8 @@
                             price: '€12',
                             coords: '47.7956,13.0475'
                         },
-                        { 
-                            name: 'Mozart\'s Birthplace', 
+                        {
+                            name: 'Mozart\'s Birthplace',
                             description: 'Το σπίτι όπου γεννήθηκε ο Βόλφγκανγκ Αμαντέους Μότσαρτ το 1756.',
                             location: 'Salzburg, Austria',
                             type: 'Μουσείο',
@@ -1862,8 +1881,8 @@
                     description: 'Μία από τις πιο όμορφες πόλεις της Ευρώπης. Θαυμάστε το Κτίριο του Κοινοβουλίου, τα λουτρά και απολαύστε ένα κρουαζιέρα στον Δούναβη.',
                     highlights: ['Κοινοβούλιο', 'Λουτρά', 'Κάστρο Buda', 'Γέφυρες'],
                     attractions: [
-                        { 
-                            name: 'Hungarian Parliament Building', 
+                        {
+                            name: 'Hungarian Parliament Building',
                             description: 'Εντυπωσιακό νεογοτθικό κτήριο, το μεγαλύτερο στη Χουγγαρία.',
                             location: 'Budapest, Hungary',
                             type: 'Κοινοβούλιο',
@@ -1871,8 +1890,8 @@
                             price: '€10',
                             coords: '47.5072,19.0457'
                         },
-                        { 
-                            name: 'Széchenyi Thermal Bath', 
+                        {
+                            name: 'Széchenyi Thermal Bath',
                             description: 'Τα μεγαλύτερα θεραπευτικά λουτρά της Ευρώπης. Ιαματικά νερά από βάθους 1246 μέτρων.',
                             location: 'Budapest, Hungary',
                             type: 'Λουτρά',
@@ -1888,7 +1907,7 @@
                     coords: '47.4979,19.0402'
                 }
             ],
-            
+           
             // ΠΡΑΓΑ, ΤΣΕΧΙΑ
             'prague': [
                 {
@@ -1903,8 +1922,8 @@
                     description: 'Το διάσημο σπα πόλυ της Τσεχίας. Επισκεφθείτε τις θερμές πηγές, πιείτε από τα ιαματικά νερά και θαυμάστε την μπαρόκ αρχιτεκτονική.',
                     highlights: ['Θερμές πηγές', 'Σπα', 'Μπαρόκ αρχιτεκτονική', 'Γυάλινα εργοστάσια'],
                     attractions: [
-                        { 
-                            name: 'Hot Spring Colonnade', 
+                        {
+                            name: 'Hot Spring Colonnade',
                             description: 'Στέγαστρο πάνω από τη θερμή πηγή Vřídlo που εκτοξεύει νερό σε ύψος 12 μέτρων.',
                             location: 'Karlovy Vary, Czech Republic',
                             type: 'Ιαματικές Πηγές',
@@ -1912,8 +1931,8 @@
                             price: 'Ελεύθερη',
                             coords: '50.2231,12.8864'
                         },
-                        { 
-                            name: 'Moser Glass Museum', 
+                        {
+                            name: 'Moser Glass Museum',
                             description: 'Μουσείο του διάσημου τσέχικου γυαλιού Moser, ιδρυθείς το 1857.',
                             location: 'Karlovy Vary, Czech Republic',
                             type: 'Μουσείο',
@@ -1940,8 +1959,8 @@
                     description: 'Μαγευτική μεσαιωνική πόλη με κάστρο που περιβάλλεται από τον ποταμό Vltava. Μοναδική ατμόσφαιρα και ιστορία.',
                     highlights: ['Κάστρο Český Krumlov', 'Παλιά πόλη', 'Ποταμός Vltava', 'Μεσαιωνικά σοκάκια'],
                     attractions: [
-                        { 
-                            name: 'Český Krumlov Castle', 
+                        {
+                            name: 'Český Krumlov Castle',
                             description: 'Δεύτερο μεγαλύτερο κάστρο στην Τσεχία με 40 κτήρια και 5 αυλές.',
                             location: 'Český Krumlov, Czech Republic',
                             type: 'Κάστρο',
@@ -1949,8 +1968,8 @@
                             price: '€10',
                             coords: '48.8127,14.3175'
                         },
-                        { 
-                            name: 'Old Town Square', 
+                        {
+                            name: 'Old Town Square',
                             description: 'Μεσαιωνική πλατεία με γοτθικά, αναγεννησιακά και μπαρόκ κτίρια.',
                             location: 'Český Krumlov, Czech Republic',
                             type: 'Ιστορική Πλατεία',
@@ -1966,7 +1985,7 @@
                     coords: '48.8127,14.3175'
                 }
             ],
-            
+           
             // ΒΟΥΔΑΠΕΣΤΗ, ΟΥΓΓΑΡΙΑ
             'budapest': [
                 {
@@ -1981,8 +2000,8 @@
                     description: 'Η μεγαλύτερη λίμνη της Κεντρικής Ευρούπης. Ιδανική για κολύμπι, σέρφινγκ, κρασί και ξεκούραση. Οι αμπελώνες της περιοχής είναι διάσημοι.',
                     highlights: ['Κολύμπι', 'Οίνος', 'Παραλίες', 'Ιστιοπλοΐα'],
                     attractions: [
-                        { 
-                            name: 'Tihany Abbey', 
+                        {
+                            name: 'Tihany Abbey',
                             description: 'Ιστορική μονή του 11ου αιώνα με θέα στη λίμνη Balaton.',
                             location: 'Tihany, Hungary',
                             type: 'Θρησκευτικό Μνημείο',
@@ -1990,8 +2009,8 @@
                             price: '€3',
                             coords: '46.9131,17.8883'
                         },
-                        { 
-                            name: 'Hévíz Thermal Lake', 
+                        {
+                            name: 'Hévíz Thermal Lake',
                             description: 'Η μεγαλύτερη φυσική θερμή λίμνη στην Ευρώπη, με νερό στους 38°C όλο το χρόνο.',
                             location: 'Hévíz, Hungary',
                             type: 'Θερμή Λίμνη',
@@ -2007,7 +2026,7 @@
                     coords: '46.9106,17.7346'
                 }
             ],
-            
+           
             // ΑΜΣΤΕΡΝΤΑΜ, ΟΛΛΑΝΔΙΑ
             'amsterdam': [
                 {
@@ -2022,8 +2041,8 @@
                     description: 'Το μεγαλύτερο πάρκο λουλουδιών στον κόσμο. Εκατομμύρια τουλίπες σε υπέροχες διατάξεις. Συνδυάστε με επίσκεψη στην ιστορική πόλη Haarlem.',
                     highlights: ['Τουλίπες', 'Κήποι', 'Haarlem', 'Λουλούδια'],
                     attractions: [
-                        { 
-                            name: 'Keukenhof Gardens', 
+                        {
+                            name: 'Keukenhof Gardens',
                             description: '32 εκτάρια με 7 εκατομμύρια τουλίπες. Ανοίγει μόνο 8 εβδομάδες το χρόνο.',
                             location: 'Lisse, Netherlands',
                             type: 'Βοτανικός Κήπος',
@@ -2031,8 +2050,8 @@
                             price: '€19',
                             coords: '52.2700,4.5466'
                         },
-                        { 
-                            name: 'Haarlem Grote Markt', 
+                        {
+                            name: 'Haarlem Grote Markt',
                             description: 'Κεντρική πλατεία με γοτθικό καθεδρικό και ιστορικά κτίρια.',
                             location: 'Haarlem, Netherlands',
                             type: 'Ιστορική Πλατεία',
@@ -2059,8 +2078,8 @@
                     description: 'Χωρίς δρόμους, μόνο κανάλια! Εξερευνήστε αυτό το μοναδικό χωριό με βάρκα, θα περάσετε από κάτω από γεφυράκια και θα δείτε παραδοσιακά σπιτάκια.',
                     highlights: ['Κανάλια', 'Βάρκες', 'Παραδοσιακά σπίτια', 'Γεφυράκια'],
                     attractions: [
-                        { 
-                            name: 'Giethoorn Canal Tour', 
+                        {
+                            name: 'Giethoorn Canal Tour',
                             description: 'Βόλτα με ηλεκτρική βάρκα μέσα από τα κανάλια του χωριού.',
                             location: 'Giethoorn, Netherlands',
                             type: 'Βολτά με Βάρκα',
@@ -2068,8 +2087,8 @@
                             price: '€10-20',
                             coords: '52.7390,6.0775'
                         },
-                        { 
-                            name: 'Museum Giethoorn \'t Olde Maat Uus', 
+                        {
+                            name: 'Museum Giethoorn \'t Olde Maat Uus',
                             description: 'Παλιά φάρμα που δείχνει πώς ζούσαν οι κάτοικοι τον 19ο αιώνα.',
                             location: 'Giethoorn, Netherlands',
                             type: 'Μουσείο',
@@ -2085,7 +2104,7 @@
                     coords: '52.7390,6.0775'
                 }
             ],
-            
+           
             // ΜΑΔΡΙΤΗ, ΙΣΠΑΝΙΑ
             'madrid': [
                 {
@@ -2100,8 +2119,8 @@
                     description: 'Πρωτεύουσα της Ισπανίας μέχρι το 1561. Συναντήστε χριστιανική, ισλαμική και εβραϊκή κληρονομιά σε ένα μαγευτικό μεσαιωνικό περιβάλλον.',
                     highlights: ['Αλκάθαρ', 'Καθεδρικός', 'Συναγωγή', 'Πανοραμική θέα'],
                     attractions: [
-                        { 
-                            name: 'Toledo Cathedral', 
+                        {
+                            name: 'Toledo Cathedral',
                             description: 'Γοτθικός καθεδρικός του 13ου αιώνα, ένα από τα μεγαλύτερα στην Ισπανία.',
                             location: 'Toledo, Spain',
                             type: 'Θρησκευτικό Μνημείο',
@@ -2109,8 +2128,8 @@
                             price: '€12.50',
                             coords: '39.8575,-4.0236'
                         },
-                        { 
-                            name: 'Alcázar of Toledo', 
+                        {
+                            name: 'Alcázar of Toledo',
                             description: 'Ιστορικό φρούριο που χρονολογείται από τη ρωμαϊκή περίοδο. Σήμερα στεγάζει στρατιωτικό μουσείο.',
                             location: 'Toledo, Spain',
                             type: 'Ιστορικό Φρούριο',
@@ -2137,8 +2156,8 @@
                     description: 'Εντυπωσιακός ρωμαϊκός υδραγωγός που είναι σήμερα σύμβολο της πόλης. Το κάστρο Alcázar είναι η πηγή έμπνευσης του κάστρου της Χιονάτης.',
                     highlights: ['Ρωμαϊκός υδραγωγός', 'Αλκάθαρ', 'Γαστρονομία', 'Παλιά πόλη'],
                     attractions: [
-                        { 
-                            name: 'Roman Aqueduct of Segovia', 
+                        {
+                            name: 'Roman Aqueduct of Segovia',
                             description: 'Ρωμαϊκός υδραγωγός του 1ου αιώνα μ.Χ., ύψους 28 μέτρων και μήκους 818 μέτρων.',
                             location: 'Segovia, Spain',
                             type: 'Ρωμαϊκό Μνημείο',
@@ -2146,8 +2165,8 @@
                             price: 'Ελεύθερη',
                             coords: '40.9481,-4.1183'
                         },
-                        { 
-                            name: 'Alcázar of Segovia', 
+                        {
+                            name: 'Alcázar of Segovia',
                             description: 'Μεσαιωνικό κάστρο που ενέπνευσε το κάστρο της Χιονάτης της Disney.',
                             location: 'Segovia, Spain',
                             type: 'Κάστρο',
@@ -2163,7 +2182,7 @@
                     coords: '40.9429,-4.1088'
                 }
             ],
-            
+           
             // ΛΙΣΑΒΟΝΑ, ΠΟΡΤΟΓΑΛΙΑ
             'lisbon': [
                 {
@@ -2178,8 +2197,8 @@
                     description: 'Μαγευτική πόλη με ρομαντικά παλάτια και εκπληκτικά κάστρα κρυμμένα στα βουνά. Το Pena Palace είναι από τα πιο φωτογενή στην Ευρώπη.',
                     highlights: ['Pena Palace', 'Moorish Castle', 'Quinta da Regaleira', 'Μυστικές σήραγγες'],
                     attractions: [
-                        { 
-                            name: 'Pena Palace', 
+                        {
+                            name: 'Pena Palace',
                             description: 'Πολύχρωμο ρομαντικό παλάτι του 19ου αιώνα στην κορυφή του βουνού.',
                             location: 'Sintra, Portugal',
                             type: 'Παλάτι',
@@ -2187,8 +2206,8 @@
                             price: '€14',
                             coords: '38.7875,-9.3903'
                         },
-                        { 
-                            name: 'Quinta da Regaleira', 
+                        {
+                            name: 'Quinta da Regaleira',
                             description: 'Παλάτι με κήπους, σπηλιές και το διάσημο "Φρέαρ της Μύησης".',
                             location: 'Sintra, Portugal',
                             type: 'Παλάτι & Κήποι',
@@ -2215,8 +2234,8 @@
                     description: 'Γραφικές παραθαλάσσιες πόλεις με καζίνο, παλάτια και υπέροχες παραλίες. Ιδανική για βόλτα στη θάλασσα και θαλασσινά.',
                     highlights: ['Cascais Marina', 'Estoril Casino', 'Boca do Inferno', 'Guincho Beach'],
                     attractions: [
-                        { 
-                            name: 'Cascais Historic Center', 
+                        {
+                            name: 'Cascais Historic Center',
                             description: 'Γραφικό ιστορικό κέντρο με πλακόστρωτα δρομάκια και ψαροταβέρνες.',
                             location: 'Cascais, Portugal',
                             type: 'Ιστορικό Κέντρο',
@@ -2224,8 +2243,8 @@
                             price: 'Ελεύθερη',
                             coords: '38.6979,-9.4215'
                         },
-                        { 
-                            name: 'Boca do Inferno', 
+                        {
+                            name: 'Boca do Inferno',
                             description: 'Εντυπωσιακή ακτογραμμή όπου τα κύματα σπάνε με δύναμη σε μια σπηλιά.',
                             location: 'Cascais, Portugal',
                             type: 'Φυσικό Αξιοθέατο',
@@ -2252,8 +2271,8 @@
                     description: 'Ιστορική πόλη με ρωμαϊκά ερείπια, γοτθικό καθεδρικό και τη διάσημη "Παρθένος των Οστών".',
                     highlights: ['Roman Temple', 'Chapel of Bones', 'Évora Cathedral', 'Historic Center'],
                     attractions: [
-                        { 
-                            name: 'Roman Temple of Évora', 
+                        {
+                            name: 'Roman Temple of Évora',
                             description: 'Ρωμαϊκός ναός του 1ου αιώνα μ.Χ., ένα από τα πιο σημαντικά ρωμαϊκά μνημεία στην Πορτογαλία.',
                             location: 'Évora, Portugal',
                             type: 'Ρωμαϊκό Μνημείο',
@@ -2261,8 +2280,8 @@
                             price: 'Ελεύθερη',
                             coords: '38.5729,-7.9072'
                         },
-                        { 
-                            name: 'Capela dos Ossos (Chapel of Bones)', 
+                        {
+                            name: 'Capela dos Ossos (Chapel of Bones)',
                             description: 'Παρεκκλήσι του 16ου αιώνα διακοσμημένο με οστά και κρανιά 5.000 μοναχών.',
                             location: 'Évora, Portugal',
                             type: 'Θρησκευτικό Μνημείο',
@@ -2278,7 +2297,7 @@
                     coords: '38.5729,-7.9072'
                 }
             ],
-            
+           
             // ΔΟΥΒΛΙΝΟ, ΙΡΛΑΝΔΙΑ
             'dublin': [
                 {
@@ -2293,8 +2312,8 @@
                     description: 'Τα πιο διάσημα βράχια της Ιρλανδίας, ύψους 214 μέτρων. Εντυπωσιακή θέα στον Ατλαντικό και αμέτρητα πουλιά.',
                     highlights: ['Βράχια', 'Ατλαντικός', 'Πουλιά', 'Visitor Centre'],
                     attractions: [
-                        { 
-                            name: 'Cliffs of Moher Visitor Experience', 
+                        {
+                            name: 'Cliffs of Moher Visitor Experience',
                             description: 'Μοντέρνο κέντρο επισκεπτών με εκθέσεις για την γεωλογία και την άγρια ζωή των βράχων.',
                             location: 'Cliffs of Moher, Ireland',
                             type: 'Επισκέπτης Κέντρο',
@@ -2302,8 +2321,8 @@
                             price: '€10',
                             coords: '52.9719,-9.4265'
                         },
-                        { 
-                            name: 'O\'Brien\'s Tower', 
+                        {
+                            name: 'O\'Brien\'s Tower',
                             description: 'Πύργος του 1835 που χτίστηκε για τους επισκέπτες που ήθελαν να δουν τα βράχια.',
                             location: 'Cliffs of Moher, Ireland',
                             type: 'Πύργος',
@@ -2330,8 +2349,8 @@
                     description: 'Παραδοσιακά χωριά, παλιές μονές και εκπληκτικά τοπία. Η περιοχή γυρίστηκε η ταινία "Braveheart".',
                     highlights: ['Glendalough', 'Wicklow Gap', 'Powerscourt Estate', 'Lakes'],
                     attractions: [
-                        { 
-                            name: 'Glendalough Monastic Site', 
+                        {
+                            name: 'Glendalough Monastic Site',
                             description: 'Μοναστική πόλη του 6ου αιώνα με πύργο και ερειπωμένες εκκλησίες.',
                             location: 'Wicklow Mountains, Ireland',
                             type: 'Ιστορικός Χώρος',
@@ -2339,8 +2358,8 @@
                             price: 'Ελεύθερη',
                             coords: '53.0106,-6.3275'
                         },
-                        { 
-                            name: 'Powerscourt Estate & Gardens', 
+                        {
+                            name: 'Powerscourt Estate & Gardens',
                             description: 'Εκπληκτικοί κήποι του 18ου αιώνα και καταρράκτης ύψους 121 μέτρων.',
                             location: 'Enniskerry, Ireland',
                             type: 'Κτήμα & Κήποι',
@@ -2367,8 +2386,8 @@
                     description: 'Ζωντανή πόλη με παραδοσιακή μουσική, έγχρωμα σπίτια και πρόσβαση στην άγρια ομορφιά του Connemara.',
                     highlights: ['Galway City', 'Connemara National Park', 'Kylemore Abbey', 'Traditional Music'],
                     attractions: [
-                        { 
-                            name: 'Galway City Museum', 
+                        {
+                            name: 'Galway City Museum',
                             description: 'Μουσείο με εκθέσεις για την ιστορία και τον πολιτισμό της περιοχής.',
                             location: 'Galway, Ireland',
                             type: 'Μουσείο',
@@ -2376,8 +2395,8 @@
                             price: 'Ελεύθερη',
                             coords: '53.2707,-9.0568'
                         },
-                        { 
-                            name: 'Connemara National Park', 
+                        {
+                            name: 'Connemara National Park',
                             description: '3.000 εκτάρια βάλτων, λιβαδιών, βουνών και λόφων.',
                             location: 'Connemara, Ireland',
                             type: 'Εθνικό Πάρκο',
@@ -2393,7 +2412,7 @@
                     coords: '53.2707,-9.0568'
                 }
             ],
-            
+           
             // ΕΔΙΜΒΟΥΡΓΟ, ΣΚΩΤΙΑ
             'edinburgh': [
                 {
@@ -2408,8 +2427,8 @@
                     description: 'Ανίκητα βουνά, γλαυκές λίμνες και το διαβόητο Loch Ness. Προσπαθήστε να δείτε το τέρας!',
                     highlights: ['Loch Ness', 'Glen Coe', 'Urquhart Castle', 'Ben Nevis'],
                     attractions: [
-                        { 
-                            name: 'Loch Ness Centre & Exhibition', 
+                        {
+                            name: 'Loch Ness Centre & Exhibition',
                             description: 'Εκθεσιακός χώρος που εξετάζει τα στοιχεία για το θρυλικό τέρας του Loch Ness.',
                             location: 'Drumnadrochit, Scotland',
                             type: 'Εκθεσιακό Κέντρο',
@@ -2417,8 +2436,8 @@
                             price: '£9.95',
                             coords: '57.3364,-4.4817'
                         },
-                        { 
-                            name: 'Urquhart Castle', 
+                        {
+                            name: 'Urquhart Castle',
                             description: 'Ερειπωμένο κάστρο του 13ου αιώνα με θέα στο Loch Ness.',
                             location: 'Drumnadrochit, Scotland',
                             type: 'Κάστρο',
@@ -2445,8 +2464,8 @@
                     description: 'Η πατρίδα του γκολφ και το παλαιότερο πανεπιστήμιο της Σκωτίας. Ρομαντικές καταστροφές και παραλία.',
                     highlights: ['Old Course Golf', 'University', 'Castle Ruins', 'West Sands Beach'],
                     attractions: [
-                        { 
-                            name: 'St Andrews Links (Old Course)', 
+                        {
+                            name: 'St Andrews Links (Old Course)',
                             description: 'Το παλαιότερο γήπεδο γκολφ στον κόσμο, ιδρύθηκε το 1552.',
                             location: 'St Andrews, Scotland',
                             type: 'Γήπεδο Γκολφ',
@@ -2454,8 +2473,8 @@
                             price: '£195-£270',
                             coords: '56.3464,-2.8097'
                         },
-                        { 
-                            name: 'St Andrews Cathedral Ruins', 
+                        {
+                            name: 'St Andrews Cathedral Ruins',
                             description: 'Ερείπια του μεγαλύτερου καθεδρικού ναού της Σκωτίας, ιδρύθηκε το 1158.',
                             location: 'St Andrews, Scotland',
                             type: 'Ιστορικά Ερείπια',
@@ -2471,7 +2490,7 @@
                     coords: '56.3398,-2.7967'
                 }
             ],
-            
+           
             // ΖΑΓΚΡΕΜΠ, ΚΡΟΑΤΙΑ
             'zagreb': [
                 {
@@ -2486,8 +2505,8 @@
                     description: 'Εθνικό πάρκο με 16 διαβαθμισμένες λίμνες που συνδέονται με καταρράκτες. Μοναδικό οικοσύστημα και εντυπωσιακή φυσική ομορφιά.',
                     highlights: ['Διαβαθμισμένες λίμνες', 'Καταρράκτες', 'Πεζοπορία', 'Βάρκες'],
                     attractions: [
-                        { 
-                            name: 'Plitvice Lakes National Park', 
+                        {
+                            name: 'Plitvice Lakes National Park',
                             description: 'UNESCO Μνημείο Παγκόσμιας Κληρονομιάς με 16 λίμνες και 90 καταρράκτες.',
                             location: 'Plitvice, Croatia',
                             type: 'Εθνικό Πάρκο',
@@ -2495,8 +2514,8 @@
                             price: '€10-40 (εποχιακό)',
                             coords: '44.8654,15.5820'
                         },
-                        { 
-                            name: 'Veliki Slap (Big Waterfall)', 
+                        {
+                            name: 'Veliki Slap (Big Waterfall)',
                             description: 'Ο μεγαλύτερος καταρράκτης στο πάρκο, ύψους 78 μέτρων.',
                             location: 'Plitvice Lakes, Croatia',
                             type: 'Καταρράκτης',
@@ -2523,8 +2542,8 @@
                     description: 'Περιοχή με μεσαιωνικές πόλεις, εξαιρετική κουζίνα (τρύφες, λάδι, κρασί) και παραλίες. Το Rovinj είναι εξαιρετικά γραφικό.',
                     highlights: ['Rovinj Old Town', 'Pula Arena', 'Truffles', 'Istrian Wine'],
                     attractions: [
-                        { 
-                            name: 'Rovinj Old Town', 
+                        {
+                            name: 'Rovinj Old Town',
                             description: 'Εντιμότατη πόλη με βενετσιάνικα σπίτια και στενά δρομάκια σε χερσόνησο.',
                             location: 'Rovinj, Croatia',
                             type: 'Ιστορικό Κέντρο',
@@ -2532,8 +2551,8 @@
                             price: 'Ελεύθερη',
                             coords: '45.0810,13.6395'
                         },
-                        { 
-                            name: 'Pula Arena (Roman Amphitheatre)', 
+                        {
+                            name: 'Pula Arena (Roman Amphitheatre)',
                             description: 'Αρχαιότερο ρωμαϊκό αμφιθέατρο στον κόσμο που εξακολουθεί να χρησιμοποιείται.',
                             location: 'Pula, Croatia',
                             type: 'Ρωμαϊκό Μνημείο',
@@ -2549,7 +2568,7 @@
                     coords: '45.0810,13.6395'
                 }
             ],
-            
+           
             // ΒΕΛΙΓΡΑΔΙ, ΣΕΡΒΙΑ
             'belgrade': [
                 {
@@ -2564,8 +2583,8 @@
                     description: 'Η δεύτερη μεγαλύτερη πόλη της Σερβίας, γνωστή για το φρούριο Petrovaradin και το φεστιβάλ EXIT.',
                     highlights: ['Petrovaradin Fortress', 'EXIT Festival', 'Danube Promenade', 'Old Town'],
                     attractions: [
-                        { 
-                            name: 'Petrovaradin Fortress', 
+                        {
+                            name: 'Petrovaradin Fortress',
                             description: 'Φρούριο του 18ου αιώνα γνωστό ως "Γιβραλτάρ του Δούναβη".',
                             location: 'Novi Sad, Serbia',
                             type: 'Ιστορικό Φρούριο',
@@ -2573,8 +2592,8 @@
                             price: 'Ελεύθερη',
                             coords: '45.2551,19.8630'
                         },
-                        { 
-                            name: 'EXIT Festival (July)', 
+                        {
+                            name: 'EXIT Festival (July)',
                             description: 'Μεγάλο μουσικό φεστιβάλ που γίνεται κάθε Ιούλιο στο φρούριο.',
                             location: 'Novi Sad, Serbia',
                             type: 'Φεστιβάλ',
@@ -2601,8 +2620,8 @@
                     description: 'Όρος με πυκνά δάση, βαθιές χαράδρες και θέα στον Δούναβη. Περιλαμβάνει το Εθνικό Πάρκο Τζέρνταπ.',
                     highlights: ['Tara National Park', 'Đerdap Gorge', 'Drina River House', 'Hiking Trails'],
                     attractions: [
-                        { 
-                            name: 'Tara National Park', 
+                        {
+                            name: 'Tara National Park',
                             description: 'Πάρκο με 1.000 είδη φυτών και πλούσια άγρια ζωή, συμπεριλαμβανομένων αρκούδων και λύκων.',
                             location: 'Western Serbia',
                             type: 'Εθνικό Πάρκο',
@@ -2610,8 +2629,8 @@
                             price: 'Ελεύθερη',
                             coords: '43.8946,19.4588'
                         },
-                        { 
-                            name: 'House on the Drina River', 
+                        {
+                            name: 'House on the Drina River',
                             description: 'Μικρή ξύλινη καλύβα χτισμένη σε βράχο στη μέση του ποταμού Drina.',
                             location: 'Bajina Bašta, Serbia',
                             type: 'Μοναδικό Αξιοθέατο',
@@ -2627,7 +2646,7 @@
                     coords: '43.8946,19.4588'
                 }
             ],
-            
+           
             // ΣΟΦΙΑ, ΒΟΥΛΓΑΡΙΑ
             'sofia': [
                 {
@@ -2642,8 +2661,8 @@
                     description: 'Το μεγαλύτερο και πιο διάσημο μοναστήρι της Βουλγαρίας, Μνημείο Παγκόσμιας Κληρονομιάς UNESCO. Συνδυάζεται με το χιονοδρομικό κέντρο Μπούροβτσο.',
                     highlights: ['Rila Monastery', 'Borovets Ski Resort', 'Seven Rila Lakes', 'Hiking'],
                     attractions: [
-                        { 
-                            name: 'Rila Monastery', 
+                        {
+                            name: 'Rila Monastery',
                             description: 'Ορθόδοξο μοναστήρι του 10ου αιώνα με εντυπωσιακές τοιχογραφίας.',
                             location: 'Rila Mountains, Bulgaria',
                             type: 'Θρησκευτικό Μνημείο',
@@ -2651,8 +2670,8 @@
                             price: '€5',
                             coords: '42.1333,23.3400'
                         },
-                        { 
-                            name: 'Seven Rila Lakes', 
+                        {
+                            name: 'Seven Rila Lakes',
                             description: '7 παγετώδεις λίμνες σε υψόμετρο 2.100-2.500 μέτρων.',
                             location: 'Rila Mountains, Bulgaria',
                             type: 'Φυσικό Αξιοθέατο',
@@ -2679,8 +2698,8 @@
                     description: 'Μία από τις παλαιότερες πόλεις της Ευρώπης. Ρωμαϊκό στάδιο, μεσαιωνικό κέντρο και καλλιτεχνική ατμόσφαιρα.',
                     highlights: ['Old Town', 'Roman Theatre', 'Kapana Creative District', 'Ethnographic Museum'],
                     attractions: [
-                        { 
-                            name: 'Plovdiv Roman Theatre', 
+                        {
+                            name: 'Plovdiv Roman Theatre',
                             description: 'Ρωμαϊκό θέατρο του 2ου αιώνα μ.Χ. που εξακολουθεί να χρησιμοποιείται για παραστάσεις.',
                             location: 'Plovdiv, Bulgaria',
                             type: 'Ρωμαϊκό Μνημείο',
@@ -2688,8 +2707,8 @@
                             price: '€5',
                             coords: '42.1467,24.7511'
                         },
-                        { 
-                            name: 'Kapana Creative District', 
+                        {
+                            name: 'Kapana Creative District',
                             description: 'Περιοχή με γκαλερί, εργαστήρια και μπαρ στη καρδιά της πόλης.',
                             location: 'Plovdiv, Bulgaria',
                             type: 'Πολιτιστική Περιοχή',
@@ -2705,8 +2724,8 @@
                     coords: '42.1438,24.7494'
                 }
             ],
-            
-            // ΒΟΥΚΟΥΡΕΣΤΙ, ΡΟΥΜΑΝΙΑ
+           
+                        // ΒΟΥΚΟΥΡΕΣΤΙ, ΡΟΥΜΑΝΙΑ
             'bucharest': [
                 {
                     id: 'bucharest1',
@@ -2720,8 +2739,8 @@
                     description: 'Το διάσημο κάστρο που συνδέεται με τον μύθο του Δράκουλα. Συνδυάστε με επίσκεψη στην όμορφη πόλη Brașov και τα Καρπάθια Όρη.',
                     highlights: ['Bran Castle', 'Brașov Old Town', 'Carpathian Mountains', 'Black Church'],
                     attractions: [
-                        { 
-                            name: 'Bran Castle (Dracula\'s Castle)', 
+                        {
+                            name: 'Bran Castle (Dracula\'s Castle)',
                             description: 'Κάστρο του 14ου αιώνα που συνδέεται με τον Βλαντ Τσέπες (Δράκουλας).',
                             location: 'Bran, Romania',
                             type: 'Κάστρο',
@@ -2729,8 +2748,8 @@
                             price: '€10',
                             coords: '45.5150,25.3671'
                         },
-                        { 
-                            name: 'Brașov Council Square', 
+                        {
+                            name: 'Brașov Council Square',
                             description: 'Κεντρική πλατεία με γοτθικά και μπαρόκ κτίρια και την Μαύρη Εκκλησία.',
                             location: 'Brașov, Romania',
                             type: 'Ιστορική Πλατεία',
@@ -2757,8 +2776,8 @@
                     description: 'Το δεύτερο μεγαλύτερο και καλύτερα διατηρημένο δέλτα στην Ευρώπης. Μοναδικό οικοσύστημα με πάνω από 300 είδη πουλιών.',
                     highlights: ['Βιοποικιλότητα', 'Βάρκες', 'Πουλιά', 'Τραditionαλ χωριά'],
                     attractions: [
-                        { 
-                            name: 'Danube Delta Biosphere Reserve', 
+                        {
+                            name: 'Danube Delta Biosphere Reserve',
                             description: 'UNESCO Μνημείο Παγκόσμιας Κληρονομιάς με 5.800 τ.χλμ. κανάλια, λίμνες και βάλτους.',
                             location: 'Tulcea, Romania',
                             type: 'Βιοσφαιρικό Καταφύγιο',
@@ -2766,8 +2785,8 @@
                             price: 'Ελεύθερη',
                             coords: '45.1792,28.7969'
                         },
-                        { 
-                            name: 'Letea Forest', 
+                        {
+                            name: 'Letea Forest',
                             description: 'Το πιο παλιό φυσικό δάσος της Ρουμανίας, με δέντρα ύψους 35 μέτρων.',
                             location: 'Danube Delta, Romania',
                             type: 'Φυσικό Δάσος',
@@ -2781,9 +2800,48 @@
                     bestFor: ['Φύση', 'Πουλιά', 'Ηρεμία'],
                     season: 'Μάιος-Σεπτέμβριος',
                     coords: '45.1792,28.7969'
+                },
+                {
+                    id: 'bucharest3',
+                    from: 'Βουκουρέστι',
+                    to: 'Σιναία & Μπρασόβ',
+                    distance: '140km',
+                    duration: '2 ώρες',
+                    type: 'day',
+                    category: 'culture',
+                    title: 'Σιναία: Το "Πέρλα των Καρπαθίων"',
+                    description: 'Επισκεφθείτε το κάστρο Peles στη Σιναία, το πιο όμορφο κάστρο της Ρουμανίας, και συνεχίστε στην ιστορική πόλη Μπρασόβ με τη Μαύρη Εκκλησία.',
+                    highlights: ['Κάστρο Peles', 'Μπρασόβ Old Town', 'Black Church', 'Καρπάθια Όρη'],
+                    attractions: [
+                        {
+                            name: 'Peles Castle',
+                            description: 'Νεο-αναγεννησιακό κάστρο που ήταν η θερινή κατοικία του βασιλιά Κάρολου Α΄.',
+                            location: 'Sinaia, Romania',
+                            type: 'Κάστρο',
+                            hours: '9:00-17:00',
+                            price: '€8',
+                            coords: '45.3592,25.5425'
+                        },
+                        {
+                            name: 'Black Church (Biserica Neagră)',
+                            description: 'Ο μεγαλύτερος γοτθικός ναός μεταξύ Βιέννης και Κωνσταντινούπολης.',
+                            location: 'Brașov, Romania',
+                            type: 'Θρησκευτικό Μνημείο',
+                            hours: '10:00-17:00',
+                            price: '€4',
+                            coords: '45.6411,25.5883'
+                        }
+                    ],
+                    icon: '🏰',
+                    difficulty: 'Εύκολη',
+                    bestFor: ['Ιστορία', 'Αρχιτεκτονική', 'Βουνό'],
+                    season: 'Όλο το χρόνο',
+                    coords: '45.3592,25.5425'
                 }
             ],
-            
+           
+            // ΒΑΡΣΟΒΙΑ, ΠΟΛΩΝΙΑ
+           
             // ΒΑΡΣΟΒΙΑ, ΠΟΛΩΝΙΑ
             'warsaw': [
                 {
@@ -2798,8 +2856,8 @@
                     description: 'Μία από τις πιο όμορφες πόλεις της Πολωνίας με μεσαιωνική πλατεία και κάστρο. Συχνά συνδυάζεται με επίσκεψη στο στρατόπεδο Αουσβίτς.',
                     highlights: ['Wawel Castle', 'Main Market Square', 'Auschwitz-Birkenau', 'Wieliczka Salt Mine'],
                     attractions: [
-                        { 
-                            name: 'Wawel Royal Castle', 
+                        {
+                            name: 'Wawel Royal Castle',
                             description: 'Ιστορικό κάστρο που ήταν η κατοικία των πολωνών βασιλιάδων για αιώνες.',
                             location: 'Kraków, Poland',
                             type: 'Κάστρο',
@@ -2807,8 +2865,8 @@
                             price: '€20',
                             coords: '50.0543,19.9354'
                         },
-                        { 
-                            name: 'Auschwitz-Birkenau Memorial', 
+                        {
+                            name: 'Auschwitz-Birkenau Memorial',
                             description: 'Πρώην ναζιστικό στρατόπεδο συγκέντρωσης και εξόντωσης. Μουσείο και μνημείο.',
                             location: 'Oświęcim, Poland',
                             type: 'Μνημείο & Μουσείο',
@@ -2835,8 +2893,8 @@
                     description: 'Περιοχή με πάνω από 2,000 λίμνες, ιδανική για ιστιοπλοΐα, καγιάκ και φυσικά τοπία. Το "Παιχνίδι των Θρόνων" της Πολωνίας.',
                     highlights: ['Ιστιοπλοΐα', 'Λίμνες', 'Φύση', 'Γερμανικά κάστρα'],
                     attractions: [
-                        { 
-                            name: 'Mikołajki (Pearl of Mazury)', 
+                        {
+                            name: 'Mikołajki (Pearl of Mazury)',
                             description: 'Όμορφη πόλη γνωστή ως η "Περιβόλαι των Μαζουρικών Λιμνών".',
                             location: 'Mikołajki, Poland',
                             type: 'Πόλη',
@@ -2844,8 +2902,8 @@
                             price: 'Ελεύθερη',
                             coords: '53.7784,21.4800'
                         },
-                        { 
-                            name: 'Krutynia Kayaking Trail', 
+                        {
+                            name: 'Krutynia Kayaking Trail',
                             description: '102 χλμ. διαδρομή με καγιάκ μέσα από λίμνες, ποτάμια και δάση.',
                             location: 'Mazury, Poland',
                             type: 'Διαδρομή με Καγιάκ',
@@ -2861,8 +2919,8 @@
                     coords: '53.7784,21.4800'
                 }
             ],
-            
-            // ΒΡΥΞΕΛΛΕΣ, ΒΕΛΓΙΟ
+           
+                        // ΒΡΥΞΕΛΛΕΣ, ΒΕΛΓΙΟ
             'brussels': [
                 {
                     id: 'brussels1',
@@ -2876,8 +2934,8 @@
                     description: 'Μεσαιωνική πόλη με κανάλια, γοτθική αρχιτεκτονική και διάσημη βελγική σοκολάτα. Το Γκεντ προσφέρει ζωντανή ατμόσφαιρα.',
                     highlights: ['Bruges Canals', 'Chocolate Shops', 'Ghent Castle', 'Medieval Architecture'],
                     attractions: [
-                        { 
-                            name: 'Bruges Belfry & Market Square', 
+                        {
+                            name: 'Bruges Belfry & Market Square',
                             description: 'Γοτθικός καμπαναριός του 13ου αιώνα με 366 σκαλοπάτια και θέα στην πόλη.',
                             location: 'Bruges, Belgium',
                             type: 'Ιστορικός Πύργος',
@@ -2885,8 +2943,8 @@
                             price: '€14',
                             coords: '51.2086,3.2247'
                         },
-                        { 
-                            name: 'Gravensteen Castle (Ghent)', 
+                        {
+                            name: 'Gravensteen Castle (Ghent)',
                             description: 'Μεσαιωνικό κάστρο του 12ου αιώνα με μουσείο όπλων και δωμάτια βασανιστηρίων.',
                             location: 'Ghent, Belgium',
                             type: 'Κάστρο',
@@ -2913,8 +2971,8 @@
                     description: 'Ιστορικό πεδίο μάχης του Ναπολέοντα. Συνδυάστε με επίσκεψη στα περίφημα κέντρα παραγωγής μπύρας Trappist.',
                     highlights: ['Waterloo Battlefield', 'Lion\'s Mound', 'Trappist Beer', 'Abbey of Orval'],
                     attractions: [
-                        { 
-                            name: 'Waterloo Memorial 1815', 
+                        {
+                            name: 'Waterloo Memorial 1815',
                             description: 'Μουσείο και μνημείο για τη Μάχη του Βατερλώ το 1815.',
                             location: 'Waterloo, Belgium',
                             type: 'Ιστορικό Μουσείο',
@@ -2922,9 +2980,9 @@
                             price: '€20',
                             coords: '50.7147,4.3991'
                         },
-                        { 
-                            name: 'Abbey of Orval (Trappist Beer)', 
-                            description: 'Τραπιστική μονή του 12ου αιώνα που παράγει μια από τις καλύτερες μπύρες Trappist.',
+                        {
+                            name: 'Abbey of Orval (Trappist Beer)',
+                            description: 'Τραπιστική μονή του 12ου αιώνα που παράγει μια από τις καλύτερες μπύρας Trappist.',
                             location: 'Orval, Belgium',
                             type: 'Μονή & Ζυθοποιία',
                             hours: '10:00-18:00',
@@ -2937,6 +2995,562 @@
                     bestFor: ['Ιστορία', 'Μπύρα', 'Εκπαίδευση'],
                     season: 'Όλο το χρόνο',
                     coords: '50.7147,4.3991'
+                               }
+            ],
+           
+            // ===========================================
+            // ΒΕΝΕΤΙΑ, ΙΤΑΛΙΑ
+            // ===========================================
+            'venice': [
+                {
+                    id: 'venice1',
+                    from: 'Βενετία',
+                    to: 'Βερόνα & Λίμνη Γκάρντα',
+                    distance: '120km',
+                    duration: '1.5 ώρες',
+                    type: 'day',
+                    category: 'culture',
+                    title: 'Βερόνα: Η Πόλη του Ρωμαίου και της Ιουλιέτας',
+                    description: 'Επισκεφθείτε την ιστορική Βερόνα, το σπίτι της Ιουλιέτας και το ρωμαϊκό αμφιθέατρο Arena. Συνδυάστε με βόλτα στη λίμνη Γκάρντα.',
+                    highlights: ['Casa di Giulietta', 'Arena di Verona', 'Piazza delle Erbe', 'Λίμνη Γκάρντα'],
+                    attractions: [
+                        {
+                            name: 'Arena di Verona',
+                            description: 'Ρωμαϊκό αμφιθέατρο του 1ου αιώνα μ.Χ. που χρησιμοποιείται ακόμα για όπερες και συναυλίες.',
+                            location: 'Verona, Italy',
+                            type: 'Ρωμαϊκό Μνημείο',
+                            hours: '8:30-19:30',
+                            price: '€10',
+                            coords: '45.4384,10.9916'
+                        },
+                        {
+                            name: 'Casa di Giulietta',
+                            description: 'Το διάσημο μπαλκόνι της Ιουλιέτας από το έργο του Σαίξπηρ.',
+                            location: 'Verona, Italy',
+                            type: 'Ιστορικό Μνημείο',
+                            hours: '8:30-19:30',
+                            price: '€6',
+                            coords: '45.4420,10.9984'
+                        }
+                    ],
+                    icon: '🎭',
+                    difficulty: 'Εύκολη',
+                    bestFor: ['Ρομαντική', 'Ιστορία', 'Τέχνη'],
+                    season: 'Όλο το χρόνο',
+                    coords: '45.4384,10.9916'
+                },
+                {
+                    id: 'venice2',
+                    from: 'Βενετία',
+                    to: 'Ντόλομιτες & Cortina d\'Ampezzo',
+                    distance: '160km',
+                    duration: '2.5 ώρες',
+                    type: 'weekend',
+                    category: 'nature',
+                    title: 'Ντόλομιτες: Τα Όρη με τα Ροζ Βράχια',
+                    description: 'Εντυπωσιακά βουνά UNESCO με μοναδικούς βραχώδεις σχηματισμούς. Ιδανικά για πεζοπορία το καλοκαίρι και σκι τον χειμώνα.',
+                    highlights: ['Cortina d\'Ampezzo', 'Tre Cime di Lavaredo', 'Λίμνη Braies', 'Ορειβασία'],
+                    attractions: [
+                        {
+                            name: 'Lago di Braies (Pragser Wildsee)',
+                            description: 'Η πιο φωτογενής λίμνη των Ντολομιτών με σμαραγδένια νερά και βαρκούλες.',
+                            location: 'Dolomites, Italy',
+                            type: 'Φυσικό Αξιοθέατο',
+                            hours: 'Ανοιχτό όλο το 24ωρο',
+                            price: 'Ελεύθερη',
+                            coords: '46.6942,12.0854'
+                        },
+                        {
+                            name: 'Tre Cime di Lavaredo',
+                            description: 'Τα τρία διάσημα βουνά που είναι σύμβολο των Ντολομιτών. Πεζοπορική διαδρομή γύρω τους.',
+                            location: 'Dolomites, Italy',
+                            type: 'Φυσικό Αξιοθέατο',
+                            hours: 'Ανοιχτό όλο το 24ωρο',
+                            price: '€30 (διόδια αυτοκινήτου)',
+                            coords: '46.6189,12.3028'
+                        }
+                    ],
+                    icon: '⛰️',
+                    difficulty: 'Μέτρια',
+                    bestFor: ['Φύση', 'Πεζοπορία', 'Φωτογραφία'],
+                    season: 'Ιούνιος-Οκτώβριος (Χειμώνας για σκι)',
+                    coords: '46.5385,12.1364'
+                }
+            ],
+           
+            // ===========================================
+            // ΘΕΣΣΑΛΟΝΙΚΗ, ΕΛΛΑΔΑ
+            // ===========================================
+            'thessaloniki': [
+                {
+                    id: 'thessaloniki1',
+                    from: 'Θεσσαλονίκη',
+                    to: 'Χαλκιδική',
+                    distance: '100km',
+                    duration: '1.5 ώρες',
+                    type: 'weekend',
+                    category: 'coastal',
+                    title: 'Χαλκιδική: Τρεις Πρώτοι & Χρυσές Παραλίες',
+                    description: 'Τρεις "πρόποδες" που μπαίνουν στο Αιγαίο: Κασσάνδρα, Σιθωνία και Άγιο Όρος. Κρυστάλλινα νερά και παραδοσιακά χωριά.',
+                    highlights: ['Κασσάνδρα', 'Σιθωνία', 'Πόρτο Καρράς', 'Αφύσ'],
+                    attractions: [
+                        {
+                            name: 'Πόρτο Κουφό',
+                            description: 'Μία από τις πιο όμορφες παραλίες της Χαλκιδικής με σμαραγδένια νερά και πεύκα μέχρι την άμμο.',
+                            location: 'Σιθωνία, Χαλκιδική',
+                            type: 'Παραλία',
+                            hours: 'Ανοιχτό όλο το 24ωρο',
+                            price: 'Ελεύθερη',
+                            coords: '40.0519,23.9308'
+                        },
+                        {
+                            name: 'Άγιο Όρος (μόνο για άνδρες)',
+                            description: 'Αυτόνομη μοναστική πολιτεία με 20 μονές. Απαιτεί ειδική άδεια εισόδου (διαμονή) για άνδρες.',
+                            location: 'Άγιο Όρος, Χαλκιδική',
+                            type: 'Θρησκευτικό Κέντρο',
+                            hours: 'Προσβάσιμο με πλοίο από Ουρανούπολη',
+                            price: '€25-30 (άδεια)',
+                            coords: '40.1570,24.3283'
+                        }
+                    ],
+                    icon: '🏖️',
+                    difficulty: 'Εύκολη',
+                    bestFor: ['Παραλία', 'Οικογένειες', 'Καλοκαίρι'],
+                    season: 'Μάιος-Οκτώβριος',
+                    coords: '40.1570,24.3283'
+                },
+                {
+                    id: 'thessaloniki2',
+                    from: 'Θεσσαλονίκη',
+                    to: 'Μετέωρα & Τρίκαλα',
+                    distance: '220km',
+                    duration: '2.5 ώρες',
+                    type: 'weekend',
+                    category: 'culture',
+                    title: 'Μετέωρα: Οι "Ιπτάμενες" Μονές',
+                    description: 'Μοναδικές μονές χτισμένες σε βραχώδεις κορυφές. Συγκλονιστική θέα και πνευματική ατμόσφαιρα.',
+                    highlights: ['Μεγάλο Μετέωρο', 'Βαρλαάμ', 'Αγίας Τριάδας', 'Καλαμπάκα'],
+                    attractions: [
+                        {
+                            name: 'Μονή Μεγάλου Μετεώρου',
+                            description: 'Η μεγαλύτερη και παλαιότερη μονή των Μετεώρων, ιδρύθηκε τον 14ο αιώνα.',
+                            location: 'Καλαμπάκα, Ελλάδα',
+                            type: 'Θρησκευτικό Μνημείο',
+                            hours: '9:00-17:00',
+                            price: '€3',
+                            coords: '39.7241,21.6266'
+                        },
+                        {
+                            name: 'Μονή Βαρλαάμ',
+                            description: 'Η δεύτερη μεγαλύτερη μονή με πλούσια συλλογή κειμηλίων και εικόνων.',
+                            location: 'Καλαμπάκα, Ελλάδα',
+                            type: 'Θρησκευτικό Μνημείο',
+                            hours: '9:00-16:00',
+                            price: '€3',
+                            coords: '39.7214,21.6305'
+                        }
+                    ],
+                    icon: '⛪',
+                    difficulty: 'Μέτρια',
+                    bestFor: ['Ιστορία', 'Θρησκεία', 'Φωτογραφία'],
+                    season: 'Όλο το χρόνο',
+                    coords: '39.7212,21.6305'
+                },
+                {
+                    id: 'thessaloniki3',
+                    from: 'Θεσσαλονίκη',
+                    to: 'Πέλλα & Βέργινα',
+                    distance: '70km',
+                    duration: '1 ώρα',
+                    type: 'day',
+                    category: 'history',
+                    title: 'Πέλλα & Βέργινα: Το Βασίλειο του Μεγάλου Αλεξάνδρου',
+                    description: 'Επισκεφθείτε την αρχαία Πέλλα, γενέτειρα του Μεγάλου Αλεξάνδρου, και τη Βέργινα με τους βασιλικούς τάφους.',
+                    highlights: ['Αρχαία Πέλλα', 'Βασιλικοί τάφους Βεργίνας', 'Μουσείο', 'Ψηφιδωτά'],
+                    attractions: [
+                        {
+                            name: 'Αρχαιολογικός Χώρος Πέλλας',
+                            description: 'Πρωτεύουσα της αρχαίας Μακεδονίας και γενέτειρα του Μεγάλου Αλεξάνδρου.',
+                            location: 'Πέλλα, Ελλάδα',
+                            type: 'Αρχαιολογικός Χώρος',
+                            hours: '8:00-20:00',
+                            price: '€8',
+                            coords: '40.7547,22.5211'
+                        },
+                        {
+                            name: 'Βεργίνα (Αιγαί)',
+                            description: 'Αρχαία πρωτεύουσα του μακεδονικού βασιλείου με τους θρυλικούς τάφους των βασιλέων.',
+                            location: 'Βέργινα, Ελλάδα',
+                            type: 'Αρχαιολογικός Χώρος',
+                            hours: '9:00-17:00',
+                            price: '€12',
+                            coords: '40.4864,22.3161'
+                        }
+                    ],
+                    icon: '🏛️',
+                    difficulty: 'Εύκολη',
+                    bestFor: ['Ιστορία', 'Αρχαιολογία', 'Οικογένειες'],
+                    season: 'Όλο το χρόνο',
+                    coords: '40.7547,22.5211'
+                }
+            ],
+           
+            // ===========================================
+            // ΣΑΛΤΣΜΠΟΥΡΓΚ, ΑΥΣΤΡΙΑ
+            // ===========================================
+            'salzburg': [
+                {
+                    id: 'salzburg1',
+                    from: 'Σάλτσμπουργκ',
+                    to: 'Hallstatt & Dachstein',
+                    distance: '80km',
+                    duration: '1.5 ώρες',
+                    type: 'day',
+                    category: 'nature',
+                    title: 'Hallstatt: Το Πιο Φωτογενές Χωριό στον Κόσμο',
+                    description: 'Μαγευτική λιμναία πόλη μεταξύ βουνού και λίμνης. Επισκεφθείτε τα αλατωρυχεία και την πανοραμική πλατφόρμα "5 Fingers".',
+                    highlights: ['Hallstatt', 'Dachstein Skywalk', 'Αλατωρυχεία', 'Λίμνη Hallstätter See'],
+                    attractions: [
+                        {
+                            name: 'Hallstatt Marktplatz',
+                            description: 'Κεντρική πλατεία με παραδοσιακά σπίτια και θέα στη λίμνη.',
+                            location: 'Hallstatt, Austria',
+                            type: 'Ιστορικό Χωριό',
+                            hours: 'Ανοιχτό όλο το 24ωρο',
+                            price: 'Ελεύθερη',
+                            coords: '47.5622,13.6492'
+                        },
+                        {
+                            name: 'Dachstein Skywalk "5 Fingers"',
+                            description: 'Πλατφόρμα 400 μέτρα πάνω από την άβυσσο με εκπληκτική θέα στα Άλπεια.',
+                            location: 'Dachstein, Austria',
+                            type: 'Πανοραμική Πλατφόρμα',
+                            hours: '9:00-17:00',
+                            price: '€40 (τελεφερίκ)',
+                            coords: '47.4756,13.6056'
+                        }
+                    ],
+                    icon: '🏔️',
+                    difficulty: 'Εύκολη',
+                    bestFor: ['Φωτογραφία', 'Φύση', 'Ρομαντική'],
+                    season: 'Απρίλιος-Οκτώβριος',
+                    coords: '47.5622,13.6492'
+                },
+                {
+                    id: 'salzburg2',
+                    from: 'Σάλτσμπουργκ',
+                    to: 'Berchtesgaden & Königssee',
+                    distance: '30km',
+                    duration: '45 λεπτά',
+                    type: 'day',
+                    category: 'nature',
+                    title: 'Berchtesgaden: Τα Γερμανικά Άλπεια',
+                    description: 'Εθνικό πάρκο Berchtesgaden με την πανέμορφη λίμνη Königssee. Επισκεφθείτε το Eagles Nest του Χίτλερ.',
+                    highlights: ['Königssee', 'Eagles Nest', 'Berchtesgaden Salt Mine', 'St. Bartholomew Church'],
+                    attractions: [
+                        {
+                            name: 'Königssee Lake',
+                            description: 'Λίμνη με σμαραγδένια νερά που χαρακτηρίζεται ως η πιο καθαρή στη Γερμανία. Βόλτα με ηλεκτρική βάρκα.',
+                            location: 'Berchtesgaden, Germany',
+                            type: 'Φυσικό Αξιοθέατο',
+                            hours: '8:00-18:00',
+                            price: '€20 (βάρκα)',
+                            coords: '47.5553,12.9833'
+                        },
+                        {
+                            name: 'Kehlsteinhaus (Eagles Nest)',
+                            description: 'Βουνίσιο καταφύγιο του Χίτλερ με θέα στα Άλπεια.',
+                            location: 'Berchtesgaden, Germany',
+                            type: 'Ιστορικό Μνημείο',
+                            hours: '10:00-16:30',
+                            price: '€22 (λεωφορείο)',
+                            coords: '47.6111,13.0422'
+                        }
+                    ],
+                    icon: '🦅',
+                    difficulty: 'Μέτρια',
+                    bestFor: ['Ιστορία', 'Φύση', 'Βόλτες με βάρκα'],
+                    season: 'Μάιος-Οκτώβριος',
+                    coords: '47.6311,13.0044'
+                }
+            ],
+           
+            // ===========================================
+            // ΝΤΟΥΜΠΡΟΒΝΙΚ, ΚΡΟΑΤΙΑ
+            // ===========================================
+            'dubrovnik': [
+                {
+                    id: 'dubrovnik1',
+                    from: 'Ντουμπρόβνικ',
+                    to: 'Mostar & Κράτερ Λίμνες',
+                    distance: '130km',
+                    duration: '2.5 ώρες',
+                    type: 'day',
+                    category: 'culture',
+                    title: 'Mostar: Η Γέφυρα που Ενώνει Πολιτισμούς',
+                    description: 'Επισκεφθείτε την ιστορική πόλη Mostar στη Βοσνία-Ερζεγοβίνη με τη διάσημη παλιά γέφυρα. Συνδυάστε με τις κράτερ λίμνες.',
+                    highlights: ['Stari Most', 'Κράτερ Λίμνες', 'Παλιά Πόλη Mostar', 'Turkish Bazaar'],
+                    attractions: [
+                        {
+                            name: 'Stari Most (Old Bridge)',
+                            description: 'Γέφυρα του 16ου αιώνα που ενώνει την χριστιανική και μουσουλμανική πλευρά της πόλης.',
+                            location: 'Mostar, Bosnia',
+                            type: 'Ιστορική Γέφυρα',
+                            hours: 'Ανοιχτό όλο το 24ωρο',
+                            price: 'Ελεύθερη',
+                            coords: '43.3370,17.8150'
+                        },
+                        {
+                            name: 'Kravice Waterfalls',
+                            description: 'Εντυπωσιακοί καταρράκτες ύψους 25 μέτρων. Ιδανικοί για κολύμπι το καλοκαίρι.',
+                            location: 'Ljubuški, Bosnia',
+                            type: 'Φυσικό Αξιοθέατο',
+                            hours: '8:00-20:00',
+                            price: '€8',
+                            coords: '43.1608,17.6047'
+                        }
+                    ],
+                    icon: '🌉',
+                    difficulty: 'Εύκολη',
+                    bestFor: ['Ιστορία', 'Φύση', 'Διαπολιτισμικό'],
+                    season: 'Απρίλιος-Οκτώβριος',
+                    coords: '43.3370,17.8150'
+                },
+                {
+                    id: 'dubrovnik2',
+                    from: 'Ντουμπρόβνικ',
+                    to: 'Κόρτσουλα & Πέλιεσατς',
+                    distance: 'Varies',
+                    duration: '2-3 ώρες',
+                    type: 'weekend',
+                    category: 'coastal',
+                    title: 'Νησιά της Δαλματίας: Κόρτσουλα & Πέλιεσατς',
+                    description: 'Εξερευνήστε τα γειτονικά νησιά με φέρι. Η Κόρτσουλα έχει μεσαιωνική πόλη, ενώ η χερσόνησος Πέλιεσατς είναι διάσημη για τα κρασιά της.',
+                    highlights: ['Κόρτσουλα Old Town', 'Πέλιεσατς κρασιά', 'Μπλαντσε', 'Lumbarda'],
+                    attractions: [
+                        {
+                            name: 'Korčula Old Town',
+                            description: 'Μεσαιωνική πόλη γνωστή ως "Μικρή Ντουμπρόβνικ" με στένα δρομάκια.',
+                            location: 'Korčula, Croatia',
+                            type: 'Ιστορικό Κέντρο',
+                            hours: 'Ανοιχτό όλο το 24ωρο',
+                            price: 'Ελεύθερη',
+                            coords: '42.9608,17.1369'
+                        },
+                        {
+                            name: 'Ston City Walls',
+                            description: 'Τα μεγαλύτερα οχυρωματικά τείχη στην Ευρώπη μετά την Κινέζικος Τείχος.',
+                            location: 'Ston, Pelješac',
+                            type: 'Ιστορικά Τείχη',
+                            hours: '8:00-19:00',
+                            price: '€10',
+                            coords: '42.8383,17.6969'
+                        }
+                    ],
+                    icon: '🏝️',
+                    difficulty: 'Εύκολη',
+                    bestFor: ['Νησιά', 'Κρασί', 'Ιστορία'],
+                    season: 'Μάιος-Σεπτέμβριος',
+                    coords: '42.9608,17.1369'
+                }
+            ],
+           
+            // ===========================================
+            // ΜΠΟΡΝΤΟ, ΓΑΛΛΙΑ
+            // ===========================================
+            'bordeaux': [
+                {
+                    id: 'bordeaux1',
+                    from: 'Μπορντό',
+                    to: 'Saint-Émilion & Wine Route',
+                    distance: '45km',
+                    duration: '1 ώρα',
+                    type: 'day',
+                    category: 'culture',
+                    title: 'Saint-Émilion: Η Πόλη του Κρασιού',
+                    description: 'Μεσαιωνική πόλη Μνημείο Παγκόσμιας Κληρονομιάς UNESCO. Δοκιμάστε τα διάσημα κρασιά της περιοχής και επισκεφθείτε βιντόγια.',
+                    highlights: ['Saint-Émilion Village', 'Κρασί tasting', 'Μονόλιθος εκκλησία', 'Châteaux'],
+                    attractions: [
+                        {
+                            name: 'Saint-Émilion Village',
+                            description: 'Μεσαιωνική πόλη χτισμένη πάνω σε ασβεστολιθικό βράχο. Στενά σοκάκια και ρωμανική αρχιτεκτονική.',
+                            location: 'Saint-Émilion, France',
+                            type: 'Ιστορικό Χωριό',
+                            hours: 'Ανοιχτό όλο το 24ωρο',
+                            price: 'Ελεύθερη',
+                            coords: '44.8944,-0.1553'
+                        },
+                        {
+                            name: 'Château La Dominique',
+                            description: 'Διάσημο κτήμα κρασιού με σύγχρονη αρχιτεκτονική και εκπληκτική θέα στα αμπέλια.',
+                            location: 'Saint-Émilion, France',
+                            type: 'Βιντόγι',
+                            hours: '10:00-18:00',
+                            price: '€15-25 (degustation)',
+                            coords: '44.8742,-0.1736'
+                        }
+                    ],
+                    icon: '🍷',
+                    difficulty: 'Εύκολη',
+                    bestFor: ['Οίνος', 'Ιστορία', 'Γαστρονομία'],
+                    season: 'Απρίλιος-Οκτώβριος',
+                    coords: '44.8944,-0.1553'
+                },
+                {
+                    id: 'bordeaux2',
+                    from: 'Μπορντό',
+                    to: 'Arcachon Bay & Dune du Pilat',
+                    distance: '65km',
+                    duration: '1 ώρα',
+                    type: 'day',
+                    category: 'coastal',
+                    title: 'Dune du Pilat: Η Μεγαλύτερη Αμμοθίνα στην Ευρώπη',
+                    description: 'Εντυπωσιακή αμμοθίνα ύψους 110 μέτρων. Ανεβείτε στην κορυφή για πανοραμική θέα στον Ατλαντικό και το κόλπο Arcachon.',
+                    highlights: ['Dune du Pilat', 'Arcachon', 'Ζυθοποιία θαλασσινών', 'Bird Island'],
+                    attractions: [
+                        {
+                            name: 'Dune du Pilat',
+                            description: 'Η μεγαλύτερη αμμοθίνα στην Ευρώπη, μήκους 2.7 χλμ και ύψους 110 μέτρων.',
+                            location: 'La Teste-de-Buch, France',
+                            type: 'Φυσικό Αξιοθέατο',
+                            hours: 'Ανοιχτό όλο το 24ωρο',
+                            price: 'Ελεύθερη (πάρκινγ €6)',
+                            coords: '44.5889,-1.2136'
+                        },
+                        {
+                            name: 'Île aux Oiseaux (Bird Island)',
+                            description: 'Νησί στο κέντρο του κόλπου Arcachon με χαρακτηριστικές καλύβες "Cabanes Tchanquées".',
+                            location: 'Arcachon Bay, France',
+                            type: 'Φυσικό Αξιοθέατο',
+                            hours: 'Προσβάσιμο με βάρκα',
+                            price: '€15-25 (βάρκα)',
+                            coords: '44.6622,-1.1950'
+                        }
+                    ],
+                    icon: '🏜️',
+                    difficulty: 'Μέτρια',
+                    bestFor: ['Φύση', 'Παραλία', 'Φωτογραφία'],
+                    season: 'Απρίλιος-Οκτώβριος',
+                    coords: '44.5889,-1.2136'
+                }
+            ],
+           
+            // ===========================================
+            // ΜΙΛΑΝΟ, ΙΤΑΛΙΑ
+            // ===========================================
+            'milan': [
+                {
+                    id: 'milan1',
+                    from: 'Μιλάνο',
+                    to: 'Λίμνη Como & Bellagio',
+                    distance: '80km',
+                    duration: '1.5 ώρες',
+                    type: 'day',
+                    category: 'nature',
+                    title: 'Λίμνη Como: Ρομαντική Βόλτα & Βίλες',
+                    description: 'Πανέμορφη λίμνη στους πρόποδες των Άλπεων. Επισκεφθείτε το Bellagio, το "Περλί της λίμνης", και τις πολυτελείς βίλες.',
+                    highlights: ['Bellagio', 'Villa Carlotta', 'Boat Tour', 'Alpine Views'],
+                    attractions: [
+                        {
+                            name: 'Bellagio',
+                            description: 'Το πιο διάσημο χωριό της λίμνης Como, γνωστό για τα στενά σοκάκια και τις πολυτελείς βίλες.',
+                            location: 'Lake Como, Italy',
+                            type: 'Χωριό',
+                            hours: 'Ανοιχτό όλο το 24ωρο',
+                            price: 'Ελεύθερη',
+                            coords: '45.9876,9.2631'
+                        },
+                        {
+                            name: 'Villa Carlotta',
+                            description: 'Πολυτελής βίλα του 17ου αιώνα με βοτανικό κήπο και μουσείο γλυπτικής.',
+                            location: 'Tremezzo, Lake Como',
+                            type: 'Βίλα & Κήποι',
+                            hours: '9:00-19:30',
+                            price: '€12',
+                            coords: '45.9847,9.2325'
+                        }
+                    ],
+                    icon: '🏞️',
+                    difficulty: 'Εύκολη',
+                    bestFor: ['Ρομαντική', 'Φύση', 'Φωτογραφία'],
+                    season: 'Μάρτιος-Οκτώβριος',
+                    coords: '45.9876,9.2631'
+                },
+                {
+                    id: 'milan2',
+                    from: 'Μιλάνο',
+                    to: 'Cinque Terre',
+                    distance: '220km',
+                    duration: '3 ώρες',
+                    type: 'weekend',
+                    category: 'coastal',
+                    title: 'Cinque Terre: Τα Πέντε Χρωματιστά Χωριά',
+                    description: 'Πέντε παραδοσιακά χωριά κρεμασμένα στα βράχια της Λιγουρίας. Πεζοπορία, θαλασσινά και μοναδικά τοπία.',
+                    highlights: ['Monterosso', 'Vernazza', 'Sentiero Azzurro', 'Τοπικά θαλασσινά'],
+                    attractions: [
+                        {
+                            name: 'Monterosso al Mare',
+                            description: 'Το μεγαλύτερο από τα πέντε χωριά, με την καλύτερη παραλία.',
+                            location: 'Cinque Terre, Italy',
+                            type: 'Παραθαλάσσιο Χωριό',
+                            hours: 'Ανοιχτό όλο το 24ωρο',
+                            price: 'Ελεύθερη',
+                            coords: '44.1475,9.6547'
+                        },
+                        {
+                            name: 'Sentiero Azzurro (Blue Trail)',
+                            description: 'Διάσημη πεζοπορική διαδρομή που συνδέει τα χωριά με θέα στη θάλασσα.',
+                            location: 'Cinque Terre, Italy',
+                            type: 'Πεζοπορική Διαδρομή',
+                            hours: 'Ανοιχτό όλο το 24ωρο',
+                            price: '€7.50 (Cinque Terre Card)',
+                            coords: '44.1275,9.7142'
+                        }
+                    ],
+                    icon: '🏘️',
+                    difficulty: 'Μέτρια',
+                    bestFor: ['Πεζοπορία', 'Φωτογραφία', 'Θαλασσινά'],
+                    season: 'Απρίλιος-Οκτώβριος',
+                    coords: '44.1275,9.7142'
+                },
+// Βρες το 'milan' στον κώδικά σου και ΠΡΟΣΘΕΣΕ αυτήν την εκδρομή:
+
+                {
+                    id: 'milan3',
+                    from: 'Μιλάνο',
+                    to: 'Βερόνα & Λίμνη Γκάρντα',
+                    distance: '150km',
+                    duration: '2 ώρες',
+                    type: 'day',
+                    category: 'culture',
+                    title: 'Βερόνα: Ρωμαϊκή Κληρονομιά & Ρομαντική',
+                    description: 'Επισκεφθείτε την ιστορική Βερόνα με το διάσημο αμφιθέατρο Arena και το μπαλκόνι της Ιουλιέτας. Συνδυάστε με βόλτα στη μεγαλύτερη λίμνη της Ιταλίας, Γκάρντα.',
+                    highlights: ['Arena di Verona', 'Casa di Giulietta', 'Piazza delle Erbe', 'Λίμνη Γκάρντα'],
+                    attractions: [
+                        {
+                            name: 'Arena di Verona',
+                            description: 'Ρωμαϊκό αμφιθέατρο του 1ου αιώνα που χρησιμοποιείται ακόμα για όπερες.',
+                            location: 'Verona, Italy',
+                            type: 'Ρωμαϊκό Μνημείο',
+                            hours: '8:30-19:30',
+                            price: '€10',
+                            coords: '45.4384,10.9916'
+                        },
+                        {
+                            name: 'Lago di Garda',
+                            description: 'Η μεγαλύτερη λίμνη της Ιταλίας με παραθαλάσσια κλίμα και χαρακτηριστικά χωριά.',
+                            location: 'Lake Garda, Italy',
+                            type: 'Λίμνη',
+                            hours: 'Ανοιχτό όλο το 24ωρο',
+                            price: 'Ελεύθερη',
+                            coords: '45.6340,10.6680'
+                        }
+                    ],
+                    icon: '🎭',
+                    difficulty: 'Εύκολη',
+                    bestFor: ['Ρομαντική', 'Ιστορία', 'Φύση'],
+                    season: 'Απρίλιος-Οκτώβριος',
+                    coords: '45.4384,10.9916'
                 }
             ]
         };
@@ -2971,7 +3585,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Αυτόματη φόρτωση για Ρώμη
             setTimeout(() => loadTripsForCity('rome'), 800);
-            
+           
             // Ενημέρωση στατιστικών
             updateStats();
         });
@@ -2985,16 +3599,16 @@
                 showNotification('👈 Επέλεξε πρώτα μια πόλη εκκίνησης!', 'warning');
                 return;
             }
-            
+           
             currentCity = selectedCity;
             loadTripsForCity(selectedCity);
         }
-        
+       
         function loadTripsForCity(cityId) {
             showLoading(true);
             clearResults();
             hideError();
-            
+           
             setTimeout(() => {
                 try {
                     const trips = weekendTrips[cityId] || [];
@@ -3017,15 +3631,15 @@
                 resultsHeader.classList.add('hidden');
                 return;
             }
-            
+           
             // Φιλτράρισμα
             let filteredTrips = [...trips];
-            
+           
             // Φίλτρο κατηγορίας (tab)
             if (currentTab !== 'weekend') {
                 filteredTrips = filteredTrips.filter(trip => trip.category === currentTab);
             }
-            
+           
             // Φίλτρο απόστασης
             filteredTrips = filteredTrips.filter(trip => {
                 const distance = parseInt(trip.distance);
@@ -3036,7 +3650,7 @@
                     default: return true;
                 }
             });
-            
+           
             if (filteredTrips.length === 0) {
                 emptyState.innerHTML = `
                     <h3>🚫 Δεν βρέθηκαν εκδρομές</h3>
@@ -3049,55 +3663,71 @@
                 resultsHeader.classList.add('hidden');
                 return;
             }
-            
+           
             // Εμφάνιση αποτελεσμάτων
             emptyState.classList.add('hidden');
             resultsHeader.classList.remove('hidden');
-            
+           
             // Ενημέρωση τίτλου
-            const cityNames = {
-                'rome': 'Ρώμη', 'athens': 'Αθήνα', 'paris': 'Παρίσι',
-                'barcelona': 'Βαρκελώνη', 'berlin': 'Βερολίνο',
-                'london': 'Λονδίνο', 'vienna': 'Βιέννη',
-                'prague': 'Πράγα', 'budapest': 'Βουδαπέστη',
-                'amsterdam': 'Άμστερνταμ', 'madrid': 'Μαδρίτη',
-                'lisbon': 'Λισαβόνα', 'dublin': 'Δουβλίνο',
-                'edinburgh': 'Εδιμβούργο', 'zagreb': 'Ζάγκρεμπ',
-                'belgrade': 'Βελιγράδι', 'sofia': 'Σόφια',
-                'bucharest': 'Βουκουρέστι', 'warsaw': 'Βαρσοβία',
-                'brussels': 'Βρυξέλλες'
-            };
-            
+           const cityNames = {
+    'athens': 'Αθήνα',
+    'amsterdam': 'Άμστερνταμ',
+    'vienna': 'Βιέννη',
+    'barcelona': 'Βαρκελώνη',
+    'venice': 'Βενετία',
+    'belgrade': 'Βελιγράδι',
+    'berlin': 'Βερολίνο',
+    'brussels': 'Βρυξέλλες',
+    'bucharest': 'Βουκουρέστι',
+    'budapest': 'Βουδαπέστη',
+    'warsaw': 'Βαρσοβία',  // ΑΥΤΟ ΕΔΩ! ΠΡΙΝ ΤΟ Δουβλίνο
+    'dublin': 'Δουβλίνο',
+    'edinburgh': 'Εδιμβούργο',
+    'thessaloniki': 'Θεσσαλονίκη',
+    'zagreb': 'Ζάγκρεμπ',
+    'london': 'Λονδίνο',
+    'lisbon': 'Λισαβόνα',
+    'madrid': 'Μαδρίτη',
+    'milan': 'Μιλάνο',
+    'bordeaux': 'Μπορντό',
+    'dubrovnik': 'Ντουμπρόβνικ',
+    'paris': 'Παρίσι',
+    'prague': 'Πράγα',
+    'rome': 'Ρώμη',
+    'salzburg': 'Σάλτσμπουργκ',
+    'sofia': 'Σόφια'
+};
+           
             const cityName = cityNames[cityId] || cityId;
             resultsTitle.textContent = `🚗 Εκδρομές από ${cityName}`;
             resultsCount.textContent = `${filteredTrips.length} εκδρομές`;
-            
+           
             // Δημιουργία καρτών
             resultsGrid.innerHTML = '';
-            
+           
             filteredTrips.forEach((trip, index) => {
                 const isSaved = savedTrips.some(saved => saved.id === trip.id);
                 const card = createTripCard(trip, index, isSaved);
                 resultsGrid.appendChild(card);
             });
-            
+           
             // Ενημέρωση στατιστικών
             updateStats();
         }
-        
+       
         function createTripCard(trip, index, isSaved) {
             const card = document.createElement('div');
             card.className = 'weekend-trip-card fade-in';
             card.style.animationDelay = `${index * 0.15}s`;
-            
+           
             const typeLabels = {
                 'weekend': 'Σαββατοκύριακο',
                 'day': 'Ημερήσια'
             };
-            
+           
             // Προσθήκη tags
             const tagColorClass = `tag-${trip.category}`;
-            
+           
             // Δημιουργία HTML για τα αξιοθέατα
             let attractionsHTML = '';
             if (trip.attractions && trip.attractions.length > 0) {
@@ -3117,25 +3747,25 @@
                     </div>
                 `;
             }
-            
+           
             card.innerHTML = `
                 <div class="trip-badge">${typeLabels[trip.type] || 'Εκδρομή'}</div>
-                
+               
                 <div class="card-image">
                     <div class="card-image-content">
                         ${trip.icon}
                     </div>
                 </div>
-                
+               
                 <div class="card-content">
                     <div class="trip-route">
                         <span>${trip.from}</span>
                         <span class="route-arrow">→</span>
                         <span>${trip.to}</span>
                     </div>
-                    
+                   
                     <h3 class="trip-name">${trip.title}</h3>
-                    
+                   
                     <div class="trip-meta">
                         <div class="meta-item">
                             <span class="meta-icon">📏</span>
@@ -3154,22 +3784,22 @@
                             <span>${trip.season}</span>
                         </div>
                     </div>
-                    
+                   
                     <p class="trip-description">${trip.description}</p>
-                    
+                   
                     ${attractionsHTML}
-                    
+                   
                     <div class="highlights">
                         ${trip.highlights.map(h => `<span class="highlight">${h}</span>`).join('')}
                         ${trip.bestFor.map(b => `<span class="tag ${tagColorClass}">${b}</span>`).join('')}
                     </div>
-                    
+                   
                     <div class="card-actions">
-                        <a href="https://www.google.com/maps/search/?api=1&query=${trip.coords}" 
+                        <a href="https://www.google.com/maps/search/?api=1&query=${trip.coords}"
                            target="_blank" class="btn btn-plan">
                             🗺️ Δες Διαδρομή
                         </a>
-                        <button class="btn btn-save ${isSaved ? 'saved' : ''}" 
+                        <button class="btn btn-save ${isSaved ? 'saved' : ''}"
                                 onclick="toggleSaveTrip('${trip.id}')"
                                 data-trip-id="${trip.id}">
                             ${isSaved ? '✅ Αποθηκεύτηκε' : '⭐ Αποθήκευση'}
@@ -3177,7 +3807,7 @@
                     </div>
                 </div>
             `;
-            
+           
             return card;
         }
 
@@ -3187,19 +3817,19 @@
         function openAttractionModal(tripIndex, attractionIndex) {
             const trips = weekendTrips[currentCity] || [];
             const trip = trips[tripIndex];
-            
+           
             if (!trip || !trip.attractions || !trip.attractions[attractionIndex]) {
                 return;
             }
-            
+           
             const attraction = trip.attractions[attractionIndex];
             currentAttraction = attraction;
-            
+           
             // Ενημέρωση modal
             document.getElementById('modalTitle').textContent = attraction.name;
             document.getElementById('modalLocation').textContent = attraction.location;
             document.getElementById('modalDescription').textContent = attraction.description;
-            
+           
             // Δημιουργία πληροφοριών
             const modalInfo = document.getElementById('modalInfo');
             modalInfo.innerHTML = `
@@ -3220,18 +3850,18 @@
                     <span class="info-text"><strong>Είσοδος:</strong> ${attraction.price}</span>
                 </div>
             `;
-            
+           
             // Εμφάνιση modal
             attractionModal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
-        
+       
         function closeAttractionModal() {
             attractionModal.classList.remove('active');
             document.body.style.overflow = 'auto';
             currentAttraction = null;
         }
-        
+       
         function openGoogleMaps() {
             if (currentAttraction && currentAttraction.coords) {
                 const [lat, lng] = currentAttraction.coords.split(',');
@@ -3244,43 +3874,43 @@
         // ====================
         function switchTab(tab) {
             currentTab = tab;
-            
+           
             // Ενημέρωση UI
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
             event.target.classList.add('active');
-            
+           
             // Επανάληψη αναζήτησης
             loadTripsForCity(currentCity);
         }
-        
+       
         function setDistanceFilter(distance) {
             currentDistanceFilter = distance;
-            
+           
             // Ενημέρωση UI
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
             event.target.classList.add('active');
-            
+           
             // Επανάληψη αναζήτησης
             loadTripsForCity(currentCity);
         }
-        
+       
         function resetFilters() {
             currentTab = 'weekend';
             currentDistanceFilter = 'all';
-            
+           
             // Ενημέρωση UI
             document.querySelectorAll('.tab-btn').forEach((btn, i) => {
                 btn.classList.toggle('active', i === 0);
             });
-            
+           
             document.querySelectorAll('.filter-btn').forEach((btn, i) => {
                 btn.classList.toggle('active', i === 0);
             });
-            
+           
             loadTripsForCity(currentCity);
         }
 
@@ -3294,11 +3924,11 @@
                 trip = weekendTrips[city].find(t => t.id === tripId);
                 if (trip) break;
             }
-            
+           
             if (!trip) return;
-            
+           
             const index = savedTrips.findIndex(t => t.id === tripId);
-            
+           
             if (index === -1) {
                 // Αποθήκευση
                 savedTrips.push({
@@ -3311,10 +3941,10 @@
                 savedTrips.splice(index, 1);
                 showNotification(`🗑️ Η εκδρομή αφαιρέθηκε από τα αποθηκευμένα`, 'warning');
             }
-            
+           
             // Αποθήκευση
             localStorage.setItem('savedWeekendTrips', JSON.stringify(savedTrips));
-            
+           
             // Ενημέρωση UI
             const btn = document.querySelector(`[data-trip-id="${tripId}"]`);
             if (btn) {
@@ -3326,7 +3956,7 @@
                     btn.innerHTML = '⭐ Αποθήκευση';
                 }
             }
-            
+           
             // Ενημέρωση στατιστικών
             updateStats();
         }
@@ -3336,7 +3966,7 @@
         // ====================
         function updateStats() {
             document.getElementById('savedTrips').textContent = savedTrips.length;
-            
+           
             // Υπολογισμός συνολικών χιλιομέτρων
             let totalKm = 0;
             for (const city in weekendTrips) {
@@ -3346,11 +3976,11 @@
                 });
             }
             document.getElementById('totalKm').textContent = `${totalKm}+`;
-            
+           
             // Αριθμός πόλεων
             const cityCount = Object.keys(weekendTrips).length;
             document.getElementById('totalCities').textContent = `${cityCount}+`;
-            
+           
             // Αριθμός εκδρομών
             let tripCount = 0;
             for (const city in weekendTrips) {
@@ -3366,27 +3996,27 @@
             loadingEl.style.display = show ? 'block' : 'none';
             searchBtn.disabled = show;
         }
-        
+       
         function showError(message) {
             document.getElementById('errorMessage').textContent = message;
             errorState.classList.remove('hidden');
         }
-        
+       
         function clearError() {
             errorState.classList.add('hidden');
             loadTripsForCity(currentCity);
         }
-        
+       
         function hideError() {
             errorState.classList.add('hidden');
         }
-        
+       
         function clearResults() {
             resultsGrid.innerHTML = '';
             resultsHeader.classList.add('hidden');
             emptyState.classList.add('hidden');
         }
-        
+       
         function showNotification(message, type = 'info') {
             // Δημιουργία notification
             const notification = document.createElement('div');
@@ -3395,24 +4025,24 @@
                 <span>${type === 'success' ? '✅' : type === 'warning' ? '⚠️' : 'ℹ️'}</span>
                 <span>${message}</span>
             `;
-            
+           
             // Προσθήκη στο body
             document.body.appendChild(notification);
-            
+           
             // Αυτόματη αφαίρεση
             setTimeout(() => {
                 notification.style.animation = 'slideIn 0.4s ease reverse';
                 setTimeout(() => notification.remove(), 400);
             }, 4000);
         }
-        
+       
         // Κλείσιμο modal με ESC
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape' && attractionModal.classList.contains('active')) {
                 closeAttractionModal();
             }
         });
-        
+       
         // Κλείσιμο modal με κλικ έξω
         attractionModal.addEventListener('click', function(event) {
             if (event.target === attractionModal) {
