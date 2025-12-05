@@ -878,8 +878,8 @@
                 <div class="city-selector">
                     <select id="citySelect">
     <option value="">👈 Επέλεξε πόλη εκκίνησης</option>
-    <option value="amsterdam">🇳🇱 Άμστερνταμ, Ολλανδία</option>
     <option value="athens" selected>🇬🇷 Αθήνα, Ελλάδα</option>
+    <option value="amsterdam">🇳🇱 Άμστερνταμ, Ολλανδία</option>
     <option value="hamburg">🇩🇪 Αμβούργο, Γερμανία</option>
     <option value="valencia">🇪🇸 Βαλένθια, Ισπανία</option>
     <option value="barcelona">🇪🇸 Βαρκελώνη, Ισπανία</option>
@@ -2834,7 +2834,123 @@
                     bestFor: ['Φύση', 'Ρομαντική', 'Φωτογραφία'],
                     season: 'Απρίλιος-Οκτώβριος',
                     coords: '52.7390,6.0775'
-                }
+                },
+// ΑΜΣΤΕΡΝΤΑΜ - Εκδρομή 3
+{
+    id: 'amsterdam3',
+    from: 'Άμστερνταμ',
+    to: 'Zaanse Schans & Edam',
+    distance: '25km',
+    duration: '40 λεπτά',
+    type: 'day',
+    category: 'culture',
+    title: 'Zaanse Schans: Ανεμόμυλοι & Τυρί',
+    description: 'Ζωντανό μουσείο με παραδοσιακούς ανεμόμυλους, σπίτια από ξύλο και παραδοσιακά εργαστήρια. Συνδυάστε με το Edam για το διάσημο τυρί.',
+    highlights: ['Ανεμόμυλοι', 'Τυρί Edam', 'Ξύλινα Παπούτσια', 'Παραδοσιακά Εργαστήρια'],
+    attractions: [
+        {
+            name: 'Zaanse Schans Windmills',
+            description: 'Συλλογή από λειτουργικούς ανεμόμυλους του 17ου-18ου αιώνα.',
+            location: 'Zaandam, Netherlands',
+            type: 'Ανοιχτό Μουσείο',
+            hours: '9:00-17:00',
+            price: 'Ελεύθερη',
+            coords: '52.4742,4.8167'
+        },
+        {
+            name: 'Cheese Weigh House Edam',
+            description: 'Ιστορικό κτίριο όπου ζυγιζόταν το τυρί Edam. Σήμερα μουσείο τυριού.',
+            location: 'Edam, Netherlands',
+            type: 'Μουσείο',
+            hours: '10:00-17:00',
+            price: '€5',
+            coords: '52.5125,5.0506'
+        }
+    ],
+    icon: '🧀',
+    difficulty: 'Εύκολη',
+    bestFor: ['Παραδοσιακή κουζίνα', 'Φωτογραφία', 'Ιστορία'],
+    season: 'Όλο το χρόνο',
+    coords: '52.4742,4.8167'
+},
+
+// ΑΜΣΤΕΡΝΤΑΜ - Εκδρομή 4
+{
+    id: 'amsterdam4',
+    from: 'Άμστερνταμ',
+    to: 'Utrecht & De Haar Castle',
+    distance: '50km',
+    duration: '45 λεπτά',
+    type: 'day',
+    category: 'culture',
+    title: 'Utrecht: Κανάλια & Μεσαιωνικά Κάστρα',
+    description: 'Η τέταρτη μεγαλύτερη πόλη της Ολλανδίας με μοναδικά κανάλια σε δύο επίπεδα. Επισκεφθείτε το κάστρο De Haar, το μεγαλύτερο της Ολλανδίας.',
+    highlights: ['Dom Tower', 'Two-Level Canals', 'De Haar Castle', 'University City'],
+    attractions: [
+        {
+            name: 'Dom Tower of Utrecht',
+            description: 'Ο ψηλότερος εκκλησιαστικός πύργος στην Ολλανδία (112 μέτρα) με πανοραμική θέα.',
+            location: 'Utrecht, Netherlands',
+            type: 'Ιστορικός Πύργος',
+            hours: '10:00-17:00',
+            price: '€10',
+            coords: '52.0908,5.1217'
+        },
+        {
+            name: 'De Haar Castle',
+            description: 'Το μεγαλύτερο κάστρο της Ολλανδίας με πάρκο σχεδιασμένο από τον ίδιο αρχιτέκτονα του Κεντρικού Σταθμού του Άμστερνταμ.',
+            location: 'Haarzuilens, Netherlands',
+            type: 'Κάστρο',
+            hours: '11:00-17:00',
+            price: '€17',
+            coords: '52.1214,4.9856'
+        }
+    ],
+    icon: '🏰',
+    difficulty: 'Εύκολη',
+    bestFor: ['Αρχιτεκτονική', 'Ιστορία', 'Φωτογραφία'],
+    season: 'Όλο το χρόνο',
+    coords: '52.0908,5.1217'
+},
+
+// ΑΜΣΤΕΡΝΤΑΜ - Εκδρομή 5
+{
+    id: 'amsterdam5',
+    from: 'Άμστερνταμ',
+    to: 'Texel Island & Wadden Sea',
+    distance: '100km + ferry',
+    duration: '2 ώρες',
+    type: 'weekend',
+    category: 'nature',
+    title: 'Texel: Το Μεγαλύτερο Νησί της Ολλανδίας',
+    description: 'Το μεγαλύτερο από τα Δυτικά Φριζικά Νησιά. Πλούσια άγρια ζωή, απέραντες παραλίες και μοναδικό οικοσύστημα Wadden Sea.',
+    highlights: ['Wadden Sea', 'Φώκιες', 'Παραλίες', 'Πουλιά'],
+    attractions: [
+        {
+            name: 'Wadden Sea UNESCO',
+            description: 'Μοναδικό οικοσύστημα με παλιρροιακές περιοχές, σημαντικό για αποδημία πουλιών.',
+            location: 'Texel, Netherlands',
+            type: 'Φυσικό Αξιοθέατο',
+            hours: 'Προσβάσιμο κατά την άμπωτη',
+            price: '€15 (ξενάγηση)',
+            coords: '53.1000,4.8333'
+        },
+        {
+            name: 'Ecomare',
+            description: 'Κέντρο για τη θάλασσα Wadden και το Βόρειο Θάλασσα, με φώκιες και θαλάσσια ζώα.',
+            location: 'Texel, Netherlands',
+            type: 'Ζωολογικός Κήπος & Μουσείο',
+            hours: '9:30-17:00',
+            price: '€12',
+            coords: '53.1003,4.7781'
+        }
+    ],
+    icon: '🦭',
+    difficulty: 'Εύκολη',
+    bestFor: ['Φύση', 'Πουλιά', 'Παραλία'],
+    season: 'Απρίλιος-Οκτώβριος',
+    coords: '53.1000,4.8333'
+}
             ],
            
             // ΜΑΔΡΙΤΗ, ΙΣΠΑΝΙΑ
