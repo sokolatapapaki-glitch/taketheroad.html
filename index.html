@@ -4701,84 +4701,196 @@
 }
 ],         
            
-                        // ΒΡΥΞΕΛΛΕΣ, ΒΕΛΓΙΟ
-            'brussels': [
-                {
-                    id: 'brussels1',
-                    from: 'Βρυξέλλες',
-                    to: 'Μπρυζ & Γκεντ',
-                    distance: '100km',
-                    duration: '1.5 ώρες',
-                    type: 'day',
-                    category: 'culture',
-                    title: 'Μπρυζ: Η "Βενετία του Βορρά"',
-                    description: 'Μεσαιωνική πόλη με κανάλια, γοτθική αρχιτεκτονική και διάσημη βελγική σοκολάτα. Το Γκεντ προσφέρει ζωντανή ατμόσφαιρα.',
-                    highlights: ['Bruges Canals', 'Chocolate Shops', 'Ghent Castle', 'Medieval Architecture'],
-                    attractions: [
-                        {
-                            name: 'Bruges Belfry & Market Square',
-                            description: 'Γοτθικός καμπαναριός του 13ου αιώνα με 366 σκαλοπάτια και θέα στην πόλη.',
-                            location: 'Bruges, Belgium',
-                            type: 'Ιστορικός Πύργος',
-                            hours: '9:30-18:00',
-                            price: '€14',
-                            coords: '51.2086,3.2247'
-                        },
-                        {
-                            name: 'Gravensteen Castle (Ghent)',
-                            description: 'Μεσαιωνικό κάστρο του 12ου αιώνα με μουσείο όπλων και δωμάτια βασανιστηρίων.',
-                            location: 'Ghent, Belgium',
-                            type: 'Κάστρο',
-                            hours: '10:00-18:00',
-                            price: '€12',
-                            coords: '51.0579,3.7206'
-                        }
-                    ],
-                    icon: '🍫',
-                    difficulty: 'Εύκολη',
-                    bestFor: ['Αρχιτεκτονική', 'Φαγητό', 'Ρομαντική'],
-                    season: 'Όλο το χρόνο',
-                    coords: '51.2093,3.2247'
-                },
-                {
-                    id: 'brussels2',
-                    from: 'Βρυξέλλες',
-                    to: 'Βατερλώ & Βαστόν',
-                    distance: '30km',
-                    duration: '45 λεπτά',
-                    type: 'day',
-                    category: 'history',
-                    title: 'Βατερλώ: Η Μάχη που Άλλαξε την Ευρώπη',
-                    description: 'Ιστορικό πεδίο μάχης του Ναπολέοντα. Συνδυάστε με επίσκεψη στα περίφημα κέντρα παραγωγής μπύρας Trappist.',
-                    highlights: ['Waterloo Battlefield', 'Lion\'s Mound', 'Trappist Beer', 'Abbey of Orval'],
-                    attractions: [
-                        {
-                            name: 'Waterloo Memorial 1815',
-                            description: 'Μουσείο και μνημείο για τη Μάχη του Βατερλώ το 1815.',
-                            location: 'Waterloo, Belgium',
-                            type: 'Ιστορικό Μουσείο',
-                            hours: '9:30-18:30',
-                            price: '€20',
-                            coords: '50.7147,4.3991'
-                        },
-                        {
-                            name: 'Abbey of Orval (Trappist Beer)',
-                            description: 'Τραπιστική μονή του 12ου αιώνα που παράγει μια από τις καλύτερες μπύρας Trappist.',
-                            location: 'Orval, Belgium',
-                            type: 'Μονή & Ζυθοποιία',
-                            hours: '10:00-18:00',
-                            price: 'Ελεύθερη (μπύρα €3-5)',
-                            coords: '49.6386,5.3528'
-                        }
-                    ],
-                    icon: '⚔️',
-                    difficulty: 'Εύκολη',
-                    bestFor: ['Ιστορία', 'Μπύρα', 'Εκπαίδευση'],
-                    season: 'Όλο το χρόνο',
-                    coords: '50.7147,4.3991'
-         }
-
-
+                        // ΒΡΥΞΕΛΛΕΣ, ΒΕΛΓΙΟ - Προσθήκη 2 ακόμη εκδρομές
+'brussels': [
+    {
+        id: 'brussels1',
+        from: 'Βρυξέλλες',
+        to: 'Μπρυζ & Γκεντ',
+        distance: '100km',
+        duration: '1.5 ώρες',
+        type: 'day',
+        category: 'culture',
+        title: 'Μπρυζ: Η "Βενετία του Βορρά"',
+        description: 'Μεσαιωνική πόλη με κανάλια, γοτθική αρχιτεκτονική και διάσημη βελγική σοκολάτα. Το Γκεντ προσφέρει ζωντανή ατμόσφαιρα.',
+        highlights: ['Bruges Canals', 'Chocolate Shops', 'Ghent Castle', 'Medieval Architecture'],
+        attractions: [
+            {
+                name: 'Bruges Belfry & Market Square',
+                description: 'Γοτθικός καμπαναριός του 13ου αιώνα με 366 σκαλοπάτια και θέα στην πόλη.',
+                location: 'Bruges, Belgium',
+                type: 'Ιστορικός Πύργος',
+                hours: '9:30-18:00',
+                price: '€14',
+                coords: '51.2086,3.2247'
+            },
+            {
+                name: 'Gravensteen Castle (Ghent)',
+                description: 'Μεσαιωνικό κάστρο του 12ου αιώνα με μουσείο όπλων και δωμάτια βασανιστηρίων.',
+                location: 'Ghent, Belgium',
+                type: 'Κάστρο',
+                hours: '10:00-18:00',
+                price: '€12',
+                coords: '51.0579,3.7206'
+            }
+        ],
+        icon: '🍫',
+        difficulty: 'Εύκολη',
+        bestFor: ['Αρχιτεκτονική', 'Φαγητό', 'Ρομαντική'],
+        season: 'Όλο το χρόνο',
+        coords: '51.2093,3.2247'
+    },
+    {
+        id: 'brussels2',
+        from: 'Βρυξέλλες',
+        to: 'Βατερλώ & Βαστόν',
+        distance: '30km',
+        duration: '45 λεπτά',
+        type: 'day',
+        category: 'history',
+        title: 'Βατερλώ: Η Μάχη που Άλλαξε την Ευρώπη',
+        description: 'Ιστορικό πεδίο μάχης του Ναπολέοντα. Συνδυάστε με επίσκεψη στα περίφημα κέντρα παραγωγής μπύρας Trappist.',
+        highlights: ['Waterloo Battlefield', 'Lion\'s Mound', 'Trappist Beer', 'Abbey of Orval'],
+        attractions: [
+            {
+                name: 'Waterloo Memorial 1815',
+                description: 'Μουσείο και μνημείο για τη Μάχη του Βατερλώ το 1815.',
+                location: 'Waterloo, Belgium',
+                type: 'Ιστορικό Μουσείο',
+                hours: '9:30-18:30',
+                price: '€20',
+                coords: '50.7147,4.3991'
+            },
+            {
+                name: 'Abbey of Orval (Trappist Beer)',
+                description: 'Τραπιστική μονή του 12ου αιώνα που παράγει μια από τις καλύτερες μπύρας Trappist.',
+                location: 'Orval, Belgium',
+                type: 'Μονή & Ζυθοποιία',
+                hours: '10:00-18:00',
+                price: 'Ελεύθερη (μπύρα €3-5)',
+                coords: '49.6386,5.3528'
+            }
+        ],
+        icon: '⚔️',
+        difficulty: 'Εύκολη',
+        bestFor: ['Ιστορία', 'Μπύρα', 'Εκπαίδευση'],
+        season: 'Όλο το χρόνο',
+        coords: '50.7147,4.3991'
+    },
+    // ΕΚΔΡΟΜΗ 3 - ΠΡΟΣΘΗΚΗ (Brussels)
+    {
+        id: 'brussels3',
+        from: 'Βρυξέλλες',
+        to: 'Αμβέρσα & Diamond District',
+        distance: '45km',
+        duration: '45 λεπτά',
+        type: 'day',
+        category: 'culture',
+        title: 'Αμβέρσα: Η Πόλη των Διαμαντιών & του Ρούμπενς',
+        description: 'Η μεγαλύτερη λιμενοπολη του Βελγίου και παγκόσμιο κέντρο διαμαντιών. Επισκεφθείτε το σπίτι του Ρούμπενς, τον καθεδρικό και την παλιά πόλη.',
+        highlights: ['Αμβέρσα Cathedral', 'Diamond District', 'Rubens House', 'Grote Markt'],
+        attractions: [
+            {
+                name: 'Cathedral of Our Lady Antwerp',
+                description: 'Γοτθικός καθεδρικός ναός με έργα του Πέτερ Πάουλ Ρούμπενς.',
+                location: 'Antwerp, Belgium',
+                type: 'Θρησκευτικό Μνημείο',
+                hours: '10:00-17:00',
+                price: '€8',
+                coords: '51.2204,4.4015'
+            },
+            {
+                name: 'Antwerp Diamond District',
+                description: 'Το μεγαλύτερο διαμαντοκέντρο στον κόσμο με πάνω από 1.500 διαμαντέμπορους.',
+                location: 'Antwerp, Belgium',
+                type: 'Περιοχή Εμπορίου',
+                hours: '9:00-17:00',
+                price: 'Ελεύθερη',
+                coords: '51.2181,4.4086'
+            }
+        ],
+        icon: '💎',
+        difficulty: 'Εύκολη',
+        bestFor: ['Αρχιτεκτονική', 'Τέχνη', 'Αγορά'],
+        season: 'Όλο το χρόνο',
+        coords: '51.2204,4.4015'
+    },
+    // ΕΚΔΡΟΜΗ 4 - ΠΡΟΣΘΗΚΗ (Brussels)
+    {
+        id: 'brussels4',
+        from: 'Βρυξέλλες',
+        to: 'Dinant & Meuse Valley',
+        distance: '90km',
+        duration: '1.5 ώρες',
+        type: 'day',
+        category: 'nature',
+        title: 'Ντινάν: Η Γέννηση του Σαξοφώνου',
+        description: 'Γραφική πόλη στον ποταμό Μεύση, γενέτειρα του Adolphe Sax (εφευρέτης του σαξοφώνου). Επισκεφθείτε την οχυρωμένη φρουρά και τα σπήλαια.',
+        highlights: ['Citadel of Dinant', 'Collegiate Church', 'Saxophone Memorial', 'Meuse River'],
+        attractions: [
+            {
+                name: 'Citadel of Dinant',
+                description: 'Φρούριο σε βράχο με θέα στον ποταμό Μεύση και την πόλη. Προσβάσιμο με τελεφερίκ.',
+                location: 'Dinant, Belgium',
+                type: 'Ιστορικό Φρούριο',
+                hours: '10:00-18:00',
+                price: '€11',
+                coords: '50.2606,4.9114'
+            },
+            {
+                name: 'Grotte La Merveilleuse',
+                description: 'Όμορφα σπήλαια με σταλακτίτες και καταρράκτες.',
+                location: 'Dinant, Belgium',
+                type: 'Σπήλαιο',
+                hours: '10:00-17:00',
+                price: '€9.50',
+                coords: '50.2575,4.9125'
+            }
+        ],
+        icon: '🎷',
+        difficulty: 'Μέτρια',
+        bestFor: ['Φύση', 'Ιστορία', 'Φωτογραφία'],
+        season: 'Απρίλιος-Οκτώβριος',
+        coords: '50.2606,4.9114'
+    },
+    // ΕΚΔΡΟΜΗ 5 - ΠΡΟΣΘΗΚΗ (Brussels)
+    {
+        id: 'brussels5',
+        from: 'Βρυξέλλες',
+        to: 'Λέβεν & Stella Artois Brewery',
+        distance: '30km',
+        duration: '40 λεπτά',
+        type: 'day',
+        category: 'culture',
+        title: 'Λέβεν: Η Πόλη της Μπύρας',
+        description: 'Πανεπιστημιακή πόλη και έδρα της Stella Artois. Επισκεφθείτε την πανεπιστημιακή βιβλιοθήκη, το μουσείο μπύρας και το ιστορικό κέντρο.',
+        highlights: ['Stella Artois Brewery', 'University Library', 'Groot Begijnhof', 'Oude Markt'],
+        attractions: [
+            {
+                name: 'Stella Artois Brewery Tour',
+                description: 'Ξενάγηση στο εργοστάσιο παραγωγής της διάσημης βελγικής μπύρας.',
+                location: 'Leuven, Belgium',
+                type: 'Ζυθοποιία',
+                hours: '10:00-18:00',
+                price: '€15',
+                coords: '50.8819,4.7047'
+            },
+            {
+                name: 'University Library & Bell Tower',
+                description: 'Εντυπωσιακή βιβλιοθήκη με πύργο καμπαναριού που προσφέρει πανοραμική θέα.',
+                location: 'Leuven, Belgium',
+                type: 'Βιβλιοθήκη',
+                hours: '10:00-17:00',
+                price: '€7',
+                coords: '50.8781,4.7008'
+            }
+        ],
+        icon: '🍺',
+        difficulty: 'Εύκολη',
+        bestFor: ['Μπύρα', 'Πανεπιστήμιο', 'Αρχιτεκτονική'],
+        season: 'Όλο το χρόνο',
+        coords: '50.8819,4.7047'
+    }
 ],
            
             // ===========================================
@@ -7906,3 +8018,4 @@ function openSavedAttractionModal(tripIndex, attractionIndex) {
     </script>
 </body>
 </html>
+
