@@ -4748,16 +4748,27 @@
         const resultsGrid = document.getElementById('resultsGrid');
         const attractionModal = document.getElementById('attractionModal');
 
-        // ====================
-        // ΑΡΧΙΚΟΠΟΙΗΣΗ
-        // ====================
-        document.addEventListener('DOMContentLoaded', function() {
-            // Αυτόματη φόρτωση για Ρώμη
-            setTimeout(() => loadTripsForCity('rome'), 800);
-           
-            // Ενημέρωση στατιστικών
-            updateStats();
-        });
+     // ====================
+     // ΑΡΧΙΚΟΠΟΙΗΣΗ
+     // ====================
+     document.addEventListener('DOMContentLoaded', function() {
+         // Αυτόματη φόρτωση για Ρώμη
+         setTimeout(() => loadTripsForCity('rome'), 800);
+        
+         // Ενημέρωση στατιστικών
+         updateStats();
+         
+         // **ΠΡΟΣΘΗΚΗ: Έλεγχος αποθηκευμένων**
+         setTimeout(function() {
+             console.log("Αρχικοποίηση - Έλεγχος αποθηκευμένων:");
+             console.log("Αριθμός αποθηκευμένων:", savedTrips.length);
+             console.log("Περιεχόμενα:", savedTrips);
+             
+             if (savedTrips.length > 0) {
+                 console.log(`✅ Έχετε ${savedTrips.length} αποθηκευμένα ταξίδια`);
+             }
+         }, 1000);
+     });
 
         // ====================
         // ΑΝΑΖΗΤΗΣΗ
@@ -5130,72 +5141,236 @@
             updateStats();
         }
 
-        // ====================
-        // ΠΡΟΒΟΛΗ ΑΠΟΘΗΚΕΥΜΕΝΩΝ
-        // ====================
-        function showSavedTrips() {
-            // Κρύψε τα κανονικά αποτελέσματα
-            const resultsContainer = document.getElementById('tripResults');
-            const errorState = document.getElementById('errorState');
-            const mainContent = document.querySelector('.main-content') || document.body;
-           
-            if (resultsContainer) resultsContainer.classList.add('hidden');
-            if (errorState) errorState.classList.add('hidden');
-           
-            // Δημιούργησε container για αποθηκευμένα
-            let savedContainer = document.getElementById('savedTripsContainer');
-            if (!savedContainer) {
-                savedContainer = document.createElement('div');
-                savedContainer.id = 'savedTripsContainer';
-                savedContainer.className = 'trips-container';
-                mainContent.appendChild(savedContainer);
-            }
-           
-            // Καθάρισε το container
-            savedContainer.innerHTML = '';
-           
-            if (savedTrips.length === 0) {
-                savedContainer.innerHTML = `
-                    <div class="empty-state">
-                        <div class="empty-icon">⭐</div>
-                        <h3>Δεν έχετε αποθηκεύσει ακόμα εκδρομές</h3>
-                        <p>Πατήστε το κουμπί "⭐ Αποθήκευση" σε οποιαδήποτε εκδρομή σας αρέσει!</p>
-                        <button class="primary-btn" onclick="goBackToSearch()">🔍 Πίσω στην Αναζήτηση</button>
+ // ====================
+// ΠΡΟΒΟΛΗ ΑΠΟΘΗΚΕΥΜΕΝΩΝ
+// ====================
+function showSavedTrips() {
+    console.log("Εμφάνιση αποθηκευμένων ταξιδιών:", savedTrips.length);
+    
+    // Χρησιμοποιούμε το υπάρχον container
+    const resultsGrid = document.getElementById('resultsGrid');
+    const resultsHeader = document.getElementById('resultsHeader');
+    const emptyState = document.getElementById('emptyState');
+    
+    if (!resultsGrid) {
+        console.error("Δεν βρέθηκε το resultsGrid!");
+        return;
+    }
+    
+    // Εμφάνιση τίτλου
+    resultsHeader.classList.remove('hidden');
+    resultsTitle.textContent = `⭐ Αποθηκευμένες Εκδρομές`;
+    resultsCount.textContent = `${savedTrips.length} εκδρομές`;
+    
+    if (savedTrips.length === 0) {
+        // Άδεια αποθηκευμένα
+        resultsGrid.innerHTML = '';
+        emptyState.innerHTML = `
+            <div class="empty-state">
+                <h3>⭐ Δεν έχετε αποθηκεύσει ακόμα εκδρομές</h3>
+                <p>Πατήστε το κουμπί "⭐ Αποθήκευση" σε οποιαδήποτε εκδρομή σας αρέσει!</p>
+                <button onclick="loadTripsForCity(currentCity || 'athens')" style="margin-top: 25px; padding: 15px 35px; background: var(--primary); color: white; border: none; border-radius: 14px; cursor: pointer; font-weight: 600;">
+                    🔍 Πίσω στην Αναζήτηση
+                </button>
+            </div>
+        `;
+        emptyState.classList.remove('hidden');
+        return;
+    }
+    
+    // Κρύψε το empty state
+    emptyState.classList.add('hidden');
+    
+    // Εμφάνιση αποθηκευμένων εκδρομών
+    resultsGrid.innerHTML = '';
+    
+    savedTrips.forEach((trip, index) => {
+        const card = document.createElement('div');
+        card.className = 'weekend-trip-card fade-in';
+        card.style.animationDelay = `${index * 0.15}s`;
+        
+        const typeLabels = {
+            'weekend': 'Σαββατοκύριακο',
+            'day': 'Ημερήσια'
+        };
+        
+        // Προσθήκη tags
+        const tagColorClass = `tag-${trip.category || 'nature'}`;
+        
+        // Δημιουργία HTML για τα αξιοθέατα (if available)
+        let attractionsHTML = '';
+        if (trip.attractions && trip.attractions.length > 0) {
+            attractionsHTML = `
+                <div class="attractions-list">
+                    <h4><i class="fas fa-camera"></i> Αξιοθέατα</h4>
+                    <div class="attractions-grid">
+                        ${trip.attractions.slice(0, 2).map((attr, attrIndex) => `
+                            <div class="attraction-item" onclick="alert('Πληροφορίες για: ${attr.name}')">
+                                <span class="attraction-name">${attr.name}</span>
+                                <div class="attraction-link">
+                                    <i class="fas fa-info-circle"></i> Πληροφορίες
+                                </div>
+                            </div>
+                        `).join('')}
                     </div>
-                `;
-                savedContainer.classList.remove('hidden');
-                return;
-            }
-           
-            // Εμφάνισε τα αποθηκευμένα ταξίδια
-            const title = document.createElement('h2');
-            title.className = 'section-title';
-            title.innerHTML = `⭐ Αποθηκευμένα Ταξίδια Μου (${savedTrips.length})`;
-            savedContainer.appendChild(title);
-           
-            savedTrips.forEach(trip => {
-                const tripCard = createTripCard(trip);
-                savedContainer.appendChild(tripCard);
-            });
-           
-            // Κουμπί επιστροφής
-            const backBtn = document.createElement('button');
-            backBtn.className = 'back-btn';
-            backBtn.innerHTML = '← Πίσω στην Αναζήτηση';
-            backBtn.onclick = goBackToSearch;
-            savedContainer.appendChild(backBtn);
-           
-            savedContainer.classList.remove('hidden');
+                </div>
+            `;
         }
-       
-        function goBackToSearch() {
-            const savedContainer = document.getElementById('savedTripsContainer');
-            const resultsContainer = document.getElementById('tripResults');
-           
-            if (savedContainer) savedContainer.classList.add('hidden');
-            if (resultsContainer) resultsContainer.classList.remove('hidden');
+        
+        card.innerHTML = `
+            <div class="trip-badge">${typeLabels[trip.type] || 'Εκδρομή'}</div>
+            
+            <div class="card-image">
+                <div class="card-image-content">
+                    ${trip.icon || '🚗'}
+                </div>
+            </div>
+            
+            <div class="card-content">
+                <div class="trip-route">
+                    <span>${trip.from || 'Από'}</span>
+                    <span class="route-arrow">→</span>
+                    <span>${trip.to || 'Προς'}</span>
+                </div>
+                
+                <h3 class="trip-name">${trip.title || 'Εκδρομή'}</h3>
+                
+                <div class="trip-meta">
+                    <div class="meta-item">
+                        <span class="meta-icon">📏</span>
+                        <span>${trip.distance || 'N/A'}</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">⏱️</span>
+                        <span>${trip.duration || 'N/A'}</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">⚡</span>
+                        <span>${trip.difficulty || 'N/A'}</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">🌡️</span>
+                        <span>${trip.season || 'Όλο το χρόνο'}</span>
+                    </div>
+                </div>
+                
+                <p class="trip-description">${trip.description || ''}</p>
+                
+                ${attractionsHTML}
+                
+                <div class="highlights">
+                    ${(trip.highlights || []).map(h => `<span class="highlight">${h}</span>`).join('')}
+                    ${(trip.bestFor || []).map(b => `<span class="tag ${tagColorClass}">${b}</span>`).join('')}
+                </div>
+                
+                <div class="card-actions">
+                    <a href="https://www.google.com/maps/search/?api=1&query=${trip.coords || '37.9838,23.7275'}"
+                       target="_blank" class="btn btn-plan">
+                        🗺️ Δες Διαδρομή
+                    </a>
+                    <button class="btn btn-save saved"
+                            onclick="removeSavedTrip('${trip.id}')"
+                            data-trip-id="${trip.id}">
+                        🗑️ Αφαίρεση
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        resultsGrid.appendChild(card);
+    });
+    
+    // Προσθέτουμε κουμπί "Πίσω στην Αναζήτηση"
+    const existingBackButton = document.querySelector('.back-to-search-btn');
+    if (existingBackButton) {
+        existingBackButton.remove();
+    }
+    
+    const backButton = document.createElement('div');
+    backButton.className = 'back-to-search-btn';
+    backButton.style.textAlign = 'center';
+    backButton.style.marginTop = '40px';
+    backButton.style.padding = '20px';
+    backButton.innerHTML = `
+        <button onclick="loadTripsForCity(currentCity || 'athens')" 
+                style="padding: 15px 35px; background: var(--primary); color: white; border: none; border-radius: 14px; cursor: pointer; font-weight: 600; font-size: 16px;">
+            ← Πίσω στην Αναζήτηση
+        </button>
+    `;
+    
+    resultsGrid.parentNode.insertBefore(backButton, resultsGrid.nextSibling);
+}
+// ====================
+// ΑΦΑΙΡΕΣΗ ΑΠΟ ΑΠΟΘΗΚΕΥΜΕΝΑ
+// ====================
+function removeSavedTrip(tripId) {
+    const index = savedTrips.findIndex(t => t.id === tripId);
+    
+    if (index !== -1) {
+        const tripName = savedTrips[index].title;
+        savedTrips.splice(index, 1);
+        
+        // Αποθήκευση
+        localStorage.setItem('savedWeekendTrips', JSON.stringify(savedTrips));
+        
+        // Ενημέρωση UI
+        showNotification(`🗑️ Η εκδρομή "${tripName}" αφαιρέθηκε`, 'warning');
+        
+        // Ενημέρωση στατιστικών
+        updateStats();
+        
+        // Επαναφορά προβολής
+        if (savedTrips.length === 0) {
+            showSavedTrips(); // Θα δείξει το μήνυμα "δεν έχετε αποθηκεύσει"
+        } else {
+            showSavedTrips(); // Επαναφόρτωση με τα υπόλοιπα
         }
+    }
+}
 
+// ====================
+// MODAL ΓΙΑ ΑΠΟΘΗΚΕΥΜΕΝΑ ΑΞΙΟΘΕΑΤΑ
+// ====================
+function openSavedAttractionModal(tripIndex, attractionIndex) {
+    const trip = savedTrips[tripIndex];
+    
+    if (!trip || !trip.attractions || !trip.attractions[attractionIndex]) {
+        return;
+    }
+    
+    const attraction = trip.attractions[attractionIndex];
+    currentAttraction = attraction;
+    
+    // Ενημέρωση modal
+    document.getElementById('modalTitle').textContent = attraction.name;
+    document.getElementById('modalLocation').textContent = attraction.location;
+    document.getElementById('modalDescription').textContent = attraction.description;
+    
+    // Δημιουργία πληροφοριών
+    const modalInfo = document.getElementById('modalInfo');
+    modalInfo.innerHTML = `
+        <div class="info-item">
+            <span class="info-icon">📍</span>
+            <span class="info-text"><strong>Τοποθεσία:</strong> ${attraction.location}</span>
+        </div>
+        <div class="info-item">
+            <span class="info-icon">🏛️</span>
+            <span class="info-text"><strong>Τύπος:</strong> ${attraction.type}</span>
+        </div>
+        <div class="info-item">
+            <span class="info-icon">⏰</span>
+            <span class="info-text"><strong>Ωράριο:</strong> ${attraction.hours}</span>
+        </div>
+        <div class="info-item">
+            <span class="info-icon">💰</span>
+            <span class="info-text"><strong>Είσοδος:</strong> ${attraction.price}</span>
+        </div>
+    `;
+    
+    // Εμφάνιση modal
+    attractionModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
         // ====================
         // ΣΤΑΤΙΣΤΙΚΑ
         // ====================
